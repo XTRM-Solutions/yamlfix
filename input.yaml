@@ -68,7 +68,7 @@ tags:
 #########################
 
 security:
-  - bearerAuth: []
+  - bearerAuth: [ ]
 
   # all requests require bearer-authorization
   #########################
@@ -3200,7 +3200,7 @@ components:
         - CVV
       properties:
         ExpireMonth:
-          $ref: "#/components/schemas4NumericMonth"
+          $ref: "#/components/schemas/xNumericMonth"
         ExpireYear:
           $ref: "#/components/schemas/xNumericYear"
         CreditCardNumber:
@@ -3699,7 +3699,7 @@ components:
             type: string
             example: '6363'
           Type:
-            description:  >
+            description: >
               Kind of data
             type: string
             example: "text"
@@ -3859,7 +3859,7 @@ components:
             Name of partner’s account manager
           type: string
         SalesforcePartnerID:
-          description:  >
+          description: >
             Salesforce identifier for partner
           type: string
         OtherPartnerID:
@@ -3904,7 +3904,7 @@ components:
                 IssuerAccountNumber:
                   $ref: "#/components/schemas/xIAN"
                 BankName:
-                  $ref: "#/components/schemas/xHundredCharacterString"
+                  $ref: "#/components/schemas/xHundredCharString"
                 BankCountryISO2:
                   $ref: "#/components/schemas/xCountryISO2"
                 Pagination:
@@ -3925,7 +3925,7 @@ components:
                     type: object
                     properties:
                       BankName:
-                        $ref: "#/components/schemas/xHundredCharacterString"
+                        $ref: "#/components/schemas/xHundredCharString"
                   example:
                     - BankName: "Wells Fargo Bank New Mexico Na"
                     - BankName: "Wells Fargo Bank, National Association"
