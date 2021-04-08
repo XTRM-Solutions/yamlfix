@@ -69,7 +69,7 @@ tags:
 
 security:
   - bearerAuth: []
-  
+
   # all requests require bearer-authorization
   #########################
 
@@ -270,7 +270,7 @@ paths:
 
       requestBody:
         description: >
-          Requestor and email to check
+          Request and email to check
         required: true
         content:
           application/json:
@@ -306,7 +306,7 @@ paths:
 
       requestBody:
         description: >
-          Requestor and pagination information
+          Request and pagination information
         required: true
         content:
           application/json:
@@ -344,7 +344,7 @@ paths:
 
       requestBody:
         description: >
-          Requestor and pagination information
+          Request and pagination information
         required: true
         content:
           application/json:
@@ -2498,6 +2498,8 @@ components:
       type: object
       properties:
         Error:
+          description: >
+            The nature, type, and sort of error
           type: object
       example:
         Error:
@@ -2706,27 +2708,43 @@ components:
       type: object
       properties:
         sku:
+          description: >
+            XTRM ID for product
           type: string
           example: xtrm2322
         rewardName:
+          description: >
+            Description of reward
           type: string
           example: giftcard
         currencyCode:
           $ref: "#/components/schemas/xCurrencyCode"
         status:
+          description: >
+            Status of reward or item
           type: string
           example: pending
         valueType:
+          description: >
+            fixed, variable, or other type of value
           type: string
         rewardType:
+          description: >
+            Type of reward
           type: string
         maxValue:
+          description: >
+            Maximum value this reward can carry
           type: number
           example: 500.00
         minValue:
+          description: >
+            Minimum value this reward can carry
           type: number
           example: 10.00
         faceValue:
+          description: >
+            Value on the face of the card
           type: number
           example: 50.00
         countries:
@@ -2738,15 +2756,23 @@ components:
       type: object
       properties:
         brandName:
+          description: >
+            Brand or name of company offering the redemption
           type: string
           example: FredCo Chocolates
         description:
+          description: >
+            A brief description of the nature of the redeemed award, experience, or item
           type: string
-          example: Delicious Apricot and Lamb Chocolates
+          example: Delicious Apricot and Lotus Chocolates
         disclaimer:
+          description: >
+            Notes or cautions regarding the award
           type: string
-          example: may contain sulfites and nuts
+          example: may contain sulfites and/or forgotten Hungarian dieties
         terms:
+          description: >
+            Legal terms and boilerplate
           type: string
           example: legal terms here
         imageUrls:
@@ -2776,6 +2802,8 @@ components:
       type: object
       properties:
         Success:
+          description: >
+            Success or failure of operation (true / false)
           type: boolean
           example: true
         Errors:
@@ -2793,13 +2821,19 @@ components:
         State:
           $ref: "#/components/schemas/xRegion"
         Country:
+          description: >
+            Country
           type: string
           example: Vanuatu
         Employer:
+          description: >
+            Name or type of employer
           type: string
           example: Vanauatuan Exports Ltd.
 
     xLinkedBankID:
+      description: >
+        Identification code for linked bank
       type: string
       minLength: 001
       maxLength: 100
@@ -2822,13 +2856,13 @@ components:
       properties:
         RecordsToSkip:
           description: >
-            page of the existing results
+            Page **1-based** number of results
           type: string
           pattern: (^[1-9]\d*$)
           example: '1'
         RecordsToTake:
           description: >
-            results per page
+            Number of results per page
           type: string
           pattern: (^[1-9]\d*$)
           example: "25"
@@ -2837,22 +2871,32 @@ components:
       type: object
       properties:
         RecordsToSkip:
+          description: >
+            Page **1-based** number of results
           type: integer
           example: 1
         RecordsToTake:
+          description: >
+            Number of results per page
           type: integer
           example: 25
         RecordsTotal:
+          description: >
+            Total number of records to display
           type: integer
           example: 2981
 
     xPaymentMethodID:
+      description: >
+        Method of payment, fetched via API
       type: string
       minLength: 01
       maxLength: 25
       example: "Use API"
 
     xPaymentMethodName:
+      description: >
+        Name of payment method response
       type: string
       minLength: 001
       maxLength: 100
@@ -2867,6 +2911,8 @@ components:
           $ref: "#/components/schemas/xPaymentMethodName"
 
     xWalletName:
+      description: >
+        XTRM’s name for the wallet (unique only to that account’s set of wallets)
       type: string
       minLength: 001
       maxLength: 100
@@ -2878,8 +2924,7 @@ components:
         - Standard
         - Accrual
       description: >
-        *Standard* wallets are standard
-        *Accrual* wallets are accrual
+        *Standard* wallets are standard, whereas *Accrual* wallets are accrual
       example: Standard
 
     xWalletRequest:
@@ -2903,6 +2948,8 @@ components:
       type: object
       properties:
         WalletID:
+          description: >
+            XTRM identifier for wallet (a globally unique identifier)
           type: integer
           example: 12345
         WalletName:
@@ -2916,18 +2963,28 @@ components:
       type: object
       properties:
         ProgramId:
+          description: >
+            An account-unique identifier for the program, assigned by XTRM
           type: integer
           example: 2316
         ProgramName:
+          description: >
+            An account-unique name for the program, created by the account administrator
           type: string
           example: Production Company
         ProgramCategory:
+          description: >
+            One of the available program categories
           type: string
           example: Performance
         ProgramType:
+          description: >
+            Type of the program for the customer
           type: string
           example: Bonus
         IsClaim:
+          description: >
+            Is this a claimed reward (beneficiary-requested compensation)
           type: string
           example: "N"
 
@@ -2946,6 +3003,8 @@ components:
           $ref: "#/components/schemas/xWalletType"
 
     xProfileStatus:
+      description: >
+        Status is one of *Submitted*, *Pending*, or *Approved*
       type: string
       enum:
         - Submitted
@@ -2955,9 +3014,9 @@ components:
 
     xNumericDateString:
       description: >
-        <p><i>mm/dd/yyyy</i>, from 1930 forward. Note that the month
-        and day <b>must</b> be two (2) digits, and the year <b>must</b>
-        be four digits.</p>
+        *mm/dd/yyyy*, from 1930 forward. The month
+        and day **must** be two (2) digits, and the year **must**
+        be four digits.
       type: string
       minLength: 10
       maxLength: 10
@@ -2968,7 +3027,7 @@ components:
       type: object
       properties:
         WalletID:
-          $ref: "#/components/schemas/xWalletID"
+          "$ref": "#/components/schemas/xWalletID"
         WalletName:
           $ref: "#/components/schemas/xWalletName"
         WalletCurrency:
@@ -2978,25 +3037,32 @@ components:
       type: object
       properties:
         Name:
+          description: >
+            Named of wallet (unique to account)
           type: string
           example: AnyPay Vatu Wallet
         ID:
-          type: integer
-          example: 93245
+          $ref: "#/components/schemas/xWalletID"
         Currency:
           $ref: "#/components/schemas/xCurrencyCode"
 
     xWalletID:
+      description: >
+        Name of wallet, unique within an account
       type: string
       minLength: 01
       maxLength: 20
       example: "289112"
 
     xCompanyName:
+      description: >
+        Name of company
       type: string
       example: "CarpetCo Investments LLC"
 
     xProgramName:
+      description: >
+        Customer-supplied name of program
       type: string
       example: "CarpetCo Jacquard Sales Spiff"
 
@@ -3004,6 +3070,8 @@ components:
       type: object
       properties:
         TransactionID:
+          description: >
+            Globally unique identifier for transaction and account
           type: integer
           example: 79821134
         CompanyName:
@@ -3013,14 +3081,21 @@ components:
         TransactionDate:
           $ref: "#/components/schemas/xDateString"
         description:
+          description: >
+            Brief description of transaction
           type: string
           example: "Selling jacquard rather than damask carpet"
         Amount:
           $ref: "#/components/schemas/xAmount"
         Type:
+          description: >
+            Type of transaction
           type: string
           example: "Debit"
         PaymentMethod:
+          description: >
+            Details of payment method (may be blank)
+          nullable: true
           type: string
           example: ""
 
@@ -3028,6 +3103,8 @@ components:
       type: object
       properties:
         Status:
+          description: >
+            Status of update
           type: string
           example: "Updated successfully"
         OperationStatus:
@@ -3079,18 +3156,24 @@ components:
           type: string
 
     xTransactionID:
+      description: >
+        Globally unique identifier for transaction and account
       type: string
       minLength: 01
       maxLength: 25
       example: "324461"
 
     xCreditCardType:
+      description: >
+        Identifier or brand of credit card
       type: string
       minLength: 01
       maxLength: 25
       example: MASTERCARD
 
     xCreditCardNumber:
+      description: >
+        Credit card number
       type: string
       minLength: 13
       maxLength: 16
@@ -3098,6 +3181,9 @@ components:
       example: "1112333455567778"
 
     xCVV:
+      description: >
+        **C**ard **V**erification **V**alue, a three or four digit number
+        serving as a verifier for the credit card’s legitimacy
       type: string
       minLength: 3
       maxLength: 4
@@ -3114,7 +3200,7 @@ components:
         - CVV
       properties:
         ExpireMonth:
-          $ref: "#/components/schemas/xNumericMonth"
+          $ref: "#/components/schemas4NumericMonth"
         ExpireYear:
           $ref: "#/components/schemas/xNumericYear"
         CreditCardNumber:
@@ -3125,6 +3211,8 @@ components:
           $ref: "#/components/schemas/xCVV"
 
     xSKU:
+      description: >
+        Identifier for
       type: string
       minLength: 7
       maxLength: 7
@@ -3155,6 +3243,8 @@ components:
         IssuerAccountNumber:
           $ref: "#/components/schemas/xIAN"
         Amount:
+          description: >
+            Value of transacted currency
           type: number
         CurrencyCode:
           $ref: "#/components/schemas/xCurrencyCode"
@@ -3202,6 +3292,8 @@ components:
         ToCurrency:
           $ref: "#/components/schemas/xCurrencyCode"
         Amount:
+          description: >
+            Value of transacted currency
           type: string
           minLength: 01
           maxLength: 25
@@ -3242,8 +3334,12 @@ components:
         Currency:
           $ref: "#/components/schemas/xCurrencyCode"
         Type:
+          description: >
+            Type of payment
           type: string
         PaymentMethod:
+          description: >
+            Method of payment
           type: string
 
     xTransactionDetails:
@@ -3259,8 +3355,7 @@ components:
         `UserPrepaidVisaEmailID` Mandatory if payment
         method is **Prepaid Virtual Visa**. Minimum amount is
         USD$5<sup style="text-decoration-line: underline">00</sup>,
-        maximum amount is
-        USD$1000<sup style="text-decoration-line: underline">00</sup>.
+        maximum amount is USD$1000.00</sup>.
       required:
         - IssuerTransactionId
         - PaymentAmount
@@ -3302,8 +3397,8 @@ components:
 
     xIssuerTransactionId:
       description: >
-        This is a unique value from the issuer
-        that identifies this specific transaction.
+        Issuer-supplied identifier
+        that specifies this transaction.
         XTRM returns this identifier unchanged in
         the transaction result. XTRM does not use
         this identifier; it is for the use of the
@@ -3313,6 +3408,8 @@ components:
       maxLength: 25
 
     xPaymentType:
+      description: >
+        Type of payment (Personal, credits, debits ...)
       type: string
       minLength: 01
       maxLength: 50
@@ -3324,11 +3421,15 @@ components:
       example: Credits
 
     xDescription:
+      description: >
+        A field for explanatory remarks
       type: string
       minLength: 001
       maxLength: 300
 
     xProgramID:
+      description: >
+        Identifier for program
       type: string
       minLength: 01
       maxLength: 25
@@ -3345,8 +3446,12 @@ components:
         RecipientUserId:
           $ref: "#/components/schemas/xIAN"
         PaymentDate:
+          description: >
+            String representing a date
           type: string
         PaymentStatus:
+          description: >
+            Status of payment
           type: string
         Amount:
           $ref: "#/components/schemas/xAmount"
@@ -3360,6 +3465,8 @@ components:
           $ref: "#/components/schemas/xRedemptionDetails"
 
     xBankBeneficiaryID:
+      description: >
+        Bank-dependent ID for beneficiary
       type: string
       minLength: 01
       maxLength: 100
@@ -3372,12 +3479,15 @@ components:
           type: object
           properties:
             AccountNumber:
+              description: Bank account numer
               type: string
               example: '5498221'
             BankName:
+              description: Bank Name
               type: string
               example: 'Axis Bank'
             BranchName:
+              description: Bank branch identifier
               type: string
               example: "Madurai"
             BankBeneficiaryStatus:
@@ -3405,6 +3515,7 @@ components:
         Country:
           $ref: "#/components/schemas/xCountry"
         TransferFee:
+          description: Fee for transfer
           type: number
         PaymentMethods:
           type: object
@@ -3419,12 +3530,15 @@ components:
           $ref: "#/components/schemas/xBankDetails"
 
     xFiftyCharString:
+      description: A string of at most fifty (50) characters
       type: string
       minLength: 01
       maxLength: 50
       example: "A string of at most fifty (50) characters"
 
     xRoutingNumber:
+      description: >
+        Financial institution routing number
       type: string
       minLength: 01
       maxLength: 15
@@ -3432,11 +3546,15 @@ components:
       example: '825331988'
 
     xAccountNumber:
+      description: >
+        Institution account identifier
       type: string
       minLength: 01
       maxLength: 50
 
     xSWIFTBIC:
+      description: >
+        SWIFT-BIC routing code
       type: string
       minLength: 01
       maxLength: 13
@@ -3452,6 +3570,7 @@ components:
         - CountryISO2
       properties:
         InstitutionName:
+          description: Name of institution
           type: string
           minLength: 01
           maxLength: 50
@@ -3506,18 +3625,28 @@ components:
           type: object
           properties:
             method:
+              description: >
+                Payment method
               type: string
               example: "Digital Gift Card"
             TransactionStatus:
+              description: >
+                Transaction pending, completed, failed
               type: string
               example: "Success"
             TransactionNumber:
+              description: >
+                ID for transaction
               type: string
               example: "WA210126-28669-40"
             Giftcard:
+              description: >
+                Name and type of gift card
               type: string
               example: '1-800-PUMPKINS.COM® Gift Card $10.00'
             GiftcardImageUrl:
+              description: >
+                URL for a displayable image of the card
               type: string
               example: '"https://www.example.com/images/example.png"'
             RecipientEmail:
@@ -3541,13 +3670,17 @@ components:
         CredentialList:
           $ref: "#/components/schemas/xCredentialList"
         RedemptionInstructions:
+          description: >
+            Redemption instructions for the reward
           type: string
-          example: "redemption instructions for the gift card"
+          example: "redemption instructions for the reward"
 
     xCredentials:
       type: object
       properties:
         ClaimCode:
+          description: >
+            ID for the claim
           type: string
 
     xCredentialList:
@@ -3556,19 +3689,29 @@ components:
         type: object
         properties:
           Label:
+            description: >
+              Name or term for the credential
             type: string
             example: "PIN"
           Value:
+            description: >
+              Credential value
             type: string
             example: '6363'
           Type:
+            description:  >
+              Kind of data
             type: string
             example: "text"
           CredentialType:
+            description: >
+              Type of credential
             type: string
             example: "pin"
 
     xTimestamp:
+      description: >
+        Time and date information
       type: string
       example: '26 Jan 2021 07:20:04'
       # does not rule out all impossible dates/times
@@ -3576,6 +3719,8 @@ components:
       pattern: ([0123]?\d\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Nov|Dec)\s[12]\d{3}\s[012]?\d:[0-5]\d:[0-5]\d)
 
     xEmpty:
+      description: >
+        No value or blank object
       type: object
       nullable: true
 
@@ -3602,9 +3747,13 @@ components:
         BeneficiaryID:
           $ref: "#/components/schemas/xIAN"
         BeneficiarySalesforceId:
+          description: >
+            Salesforce ID for beneficiary
           type: string
           example: 'sf56870921'
         OtherPartnerID:
+          description: >
+            Partner’s identification code
           type: string
           example: '832b996121cfl99'
         Region:
@@ -3640,16 +3789,22 @@ components:
           $ref: "#/components/schemas/xPostalCode"
 
     xHundredCharString:
+      description: >
+        A string from one (1) to one hundred (100) characters
       type: string
       minLength: 001
       maxLength: 100
       example: "A longer string up to one hundred (100) characters"
 
     xAPIID:
+      description: >
+        XTRM API User Identifier
       type: string
       example: 9999999_API_User
 
     xAPISecretKey:
+      description: >
+        XTRM-supplied secret key
       type: string
       example: dummyDUMMYdummyDUMMYdummyDUMMY/q7LNUdH4ks=
 
@@ -3700,17 +3855,27 @@ components:
         - ParnerLevel
       properties:
         PartnerAccountManager:
+          description: >
+            Name of partner’s account manager
           type: string
         SalesforcePartnerID:
+          description:  >
+            Salesforce identifier for partner
           type: string
         OtherPartnerID:
+          description: >
+            Other identifying code for partner
           type: string
         Region:
           $ref: "#/components/schemas/xRegion"
         PartnerLevel:
+          description: >
+            Partner status or sales level
           type: string
 
     xWebAddress:
+      description: >
+        URL or other internet resource identifier
       type: string
       minLength: 8
       maxLength: 100
@@ -3739,10 +3904,7 @@ components:
                 IssuerAccountNumber:
                   $ref: "#/components/schemas/xIAN"
                 BankName:
-                  type: string
-                  minLength: 001
-                  maxLength: 100
-                  example: "Wells"
+                  $ref: "#/components/schemas/xHundredCharacterString"
                 BankCountryISO2:
                   $ref: "#/components/schemas/xCountryISO2"
                 Pagination:
@@ -3763,7 +3925,7 @@ components:
                     type: object
                     properties:
                       BankName:
-                        type: string
+                        $ref: "#/components/schemas/xHundredCharacterString"
                   example:
                     - BankName: "Wells Fargo Bank New Mexico Na"
                     - BankName: "Wells Fargo Bank, National Association"
