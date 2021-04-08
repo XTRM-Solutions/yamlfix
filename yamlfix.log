@@ -1,0 +1,1111 @@
+2021/04/08 16:08:35 yamlfix.go:67: Writing output to file h:\intellij\go\src\yamlfix\debug_pre_output.json
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryCode</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>StateCode</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>StateName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletType</td><td><i>Standard</i> wallets are standard <i>Accrual</i> wallets are accrual
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CreditCardNumber</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CreditCardType</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ExpireMonth</td><td>numeric month of year '11 to '121
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ExpireYear</td><td><p>year from 1930 forward through 2999</p>
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CVV</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>State</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AptSuitNum</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine1</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine2</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FirstName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LastName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CurrencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WithdrawTypes</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethodID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserGiftCardEmailID</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserLinkedBankID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserPrepaidVisaEmailID</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OTP</td><td>A one-time password string consisting of six digits.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SKU</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserPayPalEmailID</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentDate</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>faceValue</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>maxValue</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>minValue</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>sku</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>countries</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>currencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>rewardName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>rewardType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>status</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>valueType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>terms</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>brandName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>disclaimer</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Status</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CompanyName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Email</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>MasteradminFirstName</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>MasteradminLastName</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Name</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ToWalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromWalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OTP</td><td>A one-time password string consisting of six digits.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ToCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>DebitTransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentDate</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CreditTransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CurrencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LinkedBankID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Status</td><td>This payment is <i>pending</i> until the ACH transaction has been completed.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientUserId</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryName</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransferFee</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ACHDebitApprovalStatus</td><td><b>optional</b>
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNumber</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BankBeneficiaryStatus</td><td><b>optional</b>
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BankName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BranchName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BankCountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BankName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BankName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethodID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentType</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>EmailNotification</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentDescription</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Comment</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>DealRegId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PartnerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SKU</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserGiftCardEmailID</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserLinkedBankID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserPrepaidVisaEmailID</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerTransactionId</td><td>This is a unique value from the issuer that identifies this specific transaction. XTRM returns this identifier unchanged in the transaction result. XTRM does not use this identifier; it is for the use of the issuer.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientUserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientUserId</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Giftcard</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TimeProcessed</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionNumber</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>method</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>GiftcardImageUrl</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientEmail</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientMobilePhoneNumber</td><td>A phone number, represented as a string of 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientName</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Type</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Value</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CredentialType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Label</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ClaimCode</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RedemptionInstructions</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerTransactionId</td><td>This is a unique value from the issuer that identifies this specific transaction. XTRM returns this identifier unchanged in the transaction result. XTRM does not use this identifier; it is for the use of the issuer.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentDate</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentTransactionId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Industry</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OneTimePassword</td><td>A one-time password string consisting of six digits.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientUserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Message</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserPaymentMethodID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserPaymentMethodName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>JobTitle</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CurrencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IsClaim</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionCategoryID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionSubCategoryID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SKU</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>brandName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>disclaimer</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>countries</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>currencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>rewardName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>rewardType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>status</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>valueType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>faceValue</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>maxValue</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>minValue</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>sku</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>terms</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CurrencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CVV</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CreditCardNumber</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CreditCardType</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ExpireMonth</td><td>numeric month of year '11 to '121
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ExpireYear</td><td><p>year from 1930 forward through 2999</p>
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AptSuitNum</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine1</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine2</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>State</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FirstName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LastName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionDate</td><td>A date and time string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Type</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CompanyName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethod</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryLinkedBankId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerTransactionId</td><td>This is a unique value from the issuer that identifies this specific transaction. XTRM returns this identifier unchanged in the transaction result. XTRM does not use this identifier; it is for the use of the issuer.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentType</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramId</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>EmailNotification</td><td>Control some email alerts to beneficiary
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryPayPayEmailId</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryWalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethodID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletId</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentDate</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentTransactionId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerTransactionId</td><td>This is a unique value from the issuer that identifies this specific transaction. XTRM returns this identifier unchanged in the transaction result. XTRM does not use this identifier; it is for the use of the issuer.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryCompanyPaymentMethodID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryCompanyPaymentMethodName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CategoryID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SubCategoryID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SubCategoryName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryCode</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CompanyType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Balance</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionDate</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Type</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Name</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Value</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Status</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientUserId</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransferFee</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BranchName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ACHDebitApprovalStatus</td><td><b>optional</b>
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNumber</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BankBeneficiaryStatus</td><td><b>optional</b>
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BankName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryName</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromDate</td><td><p><i>mm/dd/yyyy</i>, from 1930 forward. Note that the month and day <b>must</b> be two (2) digits, and the year <b>must</b> be four digits.</p>
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentType</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ToDate</td><td><p><i>mm/dd/yyyy</i>, from 1930 forward. Note that the month and day <b>must</b> be two (2) digits, and the year <b>must</b> be four digits.</p>
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientUserId</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Message</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>GetPrepaidCardsResult</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CurrencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IsClaim</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionCategoryID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionSubCategoryID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ClaimAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>InstitutionName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RemittanceLine3</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RemittanceLine4</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RoutingNumber</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SWIFTBIC</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNumber</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine1</td><td>Street name, number, and other delivery specifics
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine2</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ContactName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PhoneNumber</td><td>A phone number, represented as a string of 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountIdentityLevel</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientLastName</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientEmail</td><td>A valid email address of 100 characters or less
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientFirstName</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromWalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CVV</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CreditCardNumber</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CreditCardType</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ExpireMonth</td><td>numeric month of year '11 to '121
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ExpireYear</td><td><p>year from 1930 forward through 2999</p>
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>State</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine1</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine2</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AptSuitNum</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FirstName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LastName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CompanyWalletId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CurrencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserWalletID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CompanyAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IsClaim</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramCategory</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LinkedBankID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CurrencyCode</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Status</td><td>This payment is <i>pending</i> until the ACH transaction has been completed.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserId</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OTP</td><td>A one-time password string consisting of six digits.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ToWalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromWalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ToAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Fee</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TotalAmount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ToCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ToCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ExchangeRate</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletType</td><td><i>Standard</i> wallets are standard <i>Accrual</i> wallets are accrual
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AllowAccessAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletBalance</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletType</td><td><i>Standard</i> wallets are standard <i>Accrual</i> wallets are accrual
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Status</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OtherPartnerID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PartnerAccountManager</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryCompanyName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiarySalesforceId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryLinkedBankID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryWalletID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OTP</td><td>A one-time password string consisting of six digits.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethodID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Day</td><td>numeric day of month '1' to '31'
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Month</td><td>numeric month of year '11 to '121
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Year</td><td><p>year from 1930 forward through 2999</p>
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OneTimePassword</td><td>A one-time password string consisting of six digits.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientUserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Status</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Name</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Email</td><td>A valid email address of 100 characters or less
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNo</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Employer</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Name</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>State</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SKU</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>GetPrepaidCardDetailsResult</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IdentificationType</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>EmailNotification</td><td>Control some email alerts to beneficiary
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LegalLastName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>MobilePhone</td><td>A phone number, represented as a string of 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine1</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine2</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AptSuitNum</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Day</td><td>numeric day of month '1' to '31'
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Month</td><td>numeric month of year '11 to '121
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Year</td><td><p>year from 1930 forward through 2999</p>
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TaxId</td><td>TaxId: A string such as a US SSN, or some other tax jurisdiction’s identifier, of 100 characters or less.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>EmailAddress</td><td>A valid email address of 100 characters or less
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LegalFirstName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountIdentityLevel</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Name</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Value</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Name</td><td>A string from 2 to 40 characters in length
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>State</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNo</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Employer</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AdminFirstName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AdminLastName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryCompanyName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>OtherPartnerID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PartnerAccountManager</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PartnerLevel</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SalesforcePartnerID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WebAddress</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CategoryID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CategoryName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethodID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethodName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>FromAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Message</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TaxId</td><td>TaxId: A string such as a US SSN, or some other tax jurisdiction’s identifier, of 100 characters or less.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserId</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AptSuitNum</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine1</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine2</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Day</td><td>numeric day of month '1' to '31'
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Month</td><td>numeric month of year '11 to '121
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Year</td><td><p>year from 1930 forward through 2999</p>
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LegalFirstName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>EmailAddress</td><td>A valid email address of 100 characters or less
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>LegalLastName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>MobilePhone</td><td>A phone number, represented as a string of 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountIdentityLevel</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WalletCurrency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td>page of the existing results
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td>results per page
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RemitterAccountID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToSkip</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsToTake</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecordsTotal</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ProgramName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionDate</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>TransactionID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Type</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Amount</td><td>An amount representing some value in a specific currency, as a string
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PaymentMethod</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>description</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CompanyName</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryBankID</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RecipientAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryBankID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountNumber</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Currency</td><td>CurrencyCode: The three-letter ISO currency code
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>InstitutionName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RemittanceLine3</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RemittanceLine4</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>RoutingNumber</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SWIFTBIC</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine1</td><td>Street name, number, and other delivery specifics
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AddressLine2</td><td>Street name, number, and other delivery specifics
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ContactName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>CountryISO2</td><td>CountryISO2: The two-character ISO country abbreviation
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PhoneNumber</td><td>A phone number, represented as a string of 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>UserID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryId</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryStatus</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountIdentityLevel</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AdminEmail</td><td>A valid email address of 100 characters or less
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AdminFirstName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AdminLastName</td><td>A string from 2 to 40 characters in length
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AdminMobileNumber</td><td>A phone number, represented as a string of 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>City</td><td>City: Name of the city, from 1 to 25 characters
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Country</td><td>Country: Name of the country, from 1 to 25 characters
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Region</td><td>Region: A jurisdiction such as state, province, or region
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>EmailNotification</td><td>Control some email alerts to beneficiary
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>PostalCode</td><td>ZIP code or other code for mail delivery
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryCompanyName</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>IssuerAccountNumber</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>WebAddress</td><td><b>no description</b></td><td><b>true</b></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>AccountIdentityLevel</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>BeneficiaryID</td><td>the <code>AccountID</code>, <code>IssuerAccountNumber</code>, <code>UserID</code> (and possibly some others) is a unique XTRM account identifier, starting with <code>SPN</code> for companies (usually remitters), or <code>PAT</code> for individual beneficiaries.
+</td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>ClientID</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>Success</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 simplextable.go:129: table row: [<tr><td>SecretKey</td><td><b>no description</b></td><td><i>false</i></td></tr>]
+2021/04/08 16:08:35 yamlfix.go:67: Writing output to file h:\intellij\go\src\yamlfix\output.json
