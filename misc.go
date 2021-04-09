@@ -144,7 +144,7 @@ func StripReferencesSchema(schema *oas.SchemaRef) {
 	// within the schemaBody
 	schema.Ref = ""
 	schemaBody := schema.Value
-	if nil != schemaBody.Extensions {
+	if 0 != len(schemaBody.Extensions) {
 		xLog.Print("WARNING: Extension Properties are NOT handled by this program")
 	}
 	if nil != schemaBody.OneOf {

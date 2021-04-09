@@ -28,10 +28,25 @@ func main() {
 
 	EnhanceDescriptions(xApi)
 
-	writeJsonOASFile(xApi, GetFlagString("outfile"))
-
-	StripReferences(xApi)
-	writeJsonOASFile(xApi, "debug_post"+GetFlagString("outfile"))
+	if FlagDeref {
+		if FlagDebug {
+			xLog.Print("Writing output file dereferenced, and unmodified file as debug_post_reference_")
+			writeJsonOASFile(xApi, "debug_post_reference_"+GetFlagString("outfile"))
+		} else {
+			xLog.Print("Writing output file dereferenced")
+		}
+		StripReferences(xApi)
+		writeJsonOASFile(xApi, GetFlagString("outfile"))
+	} else {
+		writeJsonOASFile(xApi, GetFlagString("outfile"))
+		if FlagDebug {
+			xLog.Print("Writing output file with references, and expanded file as debug_post_dereference_")
+			StripReferences(xApi)
+			writeJsonOASFile(xApi, "debug_post_dereference_"+GetFlagString("outfile"))
+		} else {
+			xLog.Print("writing output file with internal references")
+		}
+	}
 
 }
 

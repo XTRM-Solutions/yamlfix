@@ -14,6 +14,7 @@ import (
 var xLogFile *os.File
 var xLog log.Logger
 
+var FlagDeref bool
 var FlagDebug bool
 var FlagVerbose bool
 var FlagQuiet bool
@@ -50,6 +51,7 @@ func InitFlags() {
 	nFlags.BoolP("quiet", "q", false, "Suppress superfluous output. Overrides verbose.")
 	nFlags.BoolP("verbose", "v", true, "Supply informative messages")
 	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently 'SIMPLEX' only) ")
+	nFlags.BoolP("expand-references", "x", true, "Expand internal and external references in POST methods")
 
 	err := nFlags.Parse(os.Args[1:])
 
@@ -59,6 +61,8 @@ func InitFlags() {
 	}
 
 	FlagDebug = GetFlagBool("debug")
+
+	FlagDeref = GetFlagBool("expand-references")
 
 	if GetFlagBool("help") {
 		_, thisCmd := filepath.Split(os.Args[0])

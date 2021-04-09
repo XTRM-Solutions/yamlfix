@@ -133,8 +133,8 @@ func MakeTableRow(paramName string, description string, required []string) (tabl
 	// table row
 	tableRow = TagDecorate(sb.String(), "tr")
 
-	if FlagDebug {
-		xLog.Printf("table row: [%s]", tableRow)
-	}
+	// if FlagDebug {
+	//	xLog.Printf("table row: [%s]", tableRow)
+	// }
 	return tableRow
 }
