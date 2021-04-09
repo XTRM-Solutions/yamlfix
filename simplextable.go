@@ -9,6 +9,14 @@ import (
 
 // EnhanceDescriptions /* func EnhanceDescriptions (api *oas.Swagger)
 func EnhanceDescriptions(api *oas.Swagger) {
+
+	// this strips the required column from the response table
+	// without requiring 2 different getSchemaProperties
+	// implementations
+	colReplace := strings.NewReplacer(
+		TagDecorate(TextFalse, "td")+"</tr>", "</tr>",
+		TagDecorate(TextTrue, "td")+"</tr>", "</tr>")
+
 	var requestTableRows, responseTableRows string
 	if !FlagDebug {
 		xLog.Printf("api is type %T", api)
@@ -37,10 +45,12 @@ func EnhanceDescriptions(api *oas.Swagger) {
 		var sb strings.Builder
 		// if there is no data for the table, don't display a table
 		if "" != requestTableRows {
-			WriteSB(&sb, RequestHeader, SimplexTableHeader, TableOpen, requestTableRows, TableClose)
+			WriteSB(&sb, RequestHeader, SimplexRequestTableHeader,
+				TableOpen, requestTableRows, TableClose)
 		}
 		if "" != responseTableRows {
-			WriteSB(&sb, ResponseHeader, SimplexTableHeader, TableOpen, responseTableRows, TableClose)
+			WriteSB(&sb, ResponseHeader, SimplexResponseTableHeader,
+				TableOpen, colReplace.Replace(responseTableRows), TableClose)
 		}
 		if sb.Len() > 0 {
 			val01.Post.Description =
@@ -58,7 +68,7 @@ func getSchemaProperties(j *oas.SchemaRef, paramName string, required []string) 
 	var pivot string
 
 	// for technical reasons, need to treat "" as "object"
-	// and switch won't accept a "" case. 
+	// and switch won't accept a "" case.
 	if "" != j.Value.Type {
 		pivot = j.Value.Type
 	} else {
@@ -96,8 +106,6 @@ func getSchemaProperties(j *oas.SchemaRef, paramName string, required []string) 
 
 // MakeTableRow turn a name description and required status to a table entry
 func MakeTableRow(paramName string, description string, required []string) (tableRow string) {
-	const TextTrue = "<b>true</b>"
-	const TextFalse = "<i>false</i>"
 
 	var requiredText = TextFalse
 	var sb strings.Builder

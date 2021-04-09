@@ -1,9 +1,10 @@
 package main
 
 import (
-	oas "github.com/getkin/kin-openapi/openapi3"
 	"os"
 	"path/filepath"
+
+	oas "github.com/getkin/kin-openapi/openapi3"
 	// https://pkg.go.dev/github.com/getkin/kin-openapi@v0.53.0/openapi3
 )
 
@@ -28,6 +29,9 @@ func main() {
 	EnhanceDescriptions(xApi)
 
 	writeJsonOASFile(xApi, GetFlagString("outfile"))
+
+	StripReferences(xApi)
+	writeJsonOASFile(xApi, "debug_post"+GetFlagString("outfile"))
 
 }
 

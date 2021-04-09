@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	oas "github.com/getkin/kin-openapi/openapi3"
 )
 
 // DeferError
@@ -111,4 +113,67 @@ func MarkdownSeparatorToHtmlTags(target string, sep string, tags ...string) (rep
 		return target
 	}
 	return replace.String()
+}
+
+// StripReferences Remove the reference pointers so that
+// UnMarshal expands everything.
+func StripReferences(api *oas.Swagger) {
+	//  Technically could do this for all operations
+	//  Connect, Delete, Get, Head,
+	//  Options, Patch, Put, and Trace
+	//  but our file only uses Post
+	for _, val01 := range api.Paths {
+		val01.Post.RequestBody.Ref = ""
+		for _, val02 := range val01.Post.RequestBody.Value.Content {
+			StripReferencesSchema(val02.Schema)
+		}
+		for _, val03 := range val01.Post.Responses {
+			val03.Ref = ""
+			for _, val04 := range val03.Value.Content {
+				StripReferencesSchema(val04.Schema)
+			}
+		}
+	}
+}
+
+// StripReferencesSchema Eventually, whatever reference
+// paths an OAS file has comes down to schema references,
+// and this recursively clears those references
+func StripReferencesSchema(schema *oas.SchemaRef) {
+	// clean this reference, and look for sub-references
+	// within the schemaBody
+	schema.Ref = ""
+	schemaBody := schema.Value
+	if nil != schemaBody.Extensions {
+		xLog.Print("WARNING: Extension Properties are NOT handled by this program")
+	}
+	if nil != schemaBody.OneOf {
+		for _, val01 := range schemaBody.OneOf {
+			StripReferencesSchema(val01)
+		}
+	}
+	if nil != schemaBody.AnyOf {
+		for _, val02 := range schemaBody.AnyOf {
+			StripReferencesSchema(val02)
+		}
+	}
+	if nil != schemaBody.AllOf {
+		for _, val03 := range schemaBody.AllOf {
+			StripReferencesSchema(val03)
+		}
+	}
+	if nil != schemaBody.Not {
+		StripReferencesSchema(schemaBody.Not)
+	}
+	if nil != schemaBody.Items {
+		StripReferencesSchema(schema.Value.Items)
+	}
+	if nil != schemaBody.Properties {
+		for _, val04 := range schemaBody.Properties {
+			StripReferencesSchema(val04)
+		}
+	}
+	if nil != schemaBody.AdditionalProperties {
+		StripReferencesSchema(schemaBody.AdditionalProperties)
+	}
 }

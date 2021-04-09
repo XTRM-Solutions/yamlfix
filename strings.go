@@ -7,8 +7,12 @@ const HeaderOpen = "<h" + HeaderLevel + ">"
 const HeaderClose = "</h" + HeaderLevel + ">"
 const RequestHeader = HeaderOpen + "Request Parameters" + HeaderClose
 const ResponseHeader = HeaderOpen + "Response Parameters" + HeaderClose
-const SimplexTableHeader = "<table><thead><tr><th>Parameter</th><th>Description</th><th>Required</th></tr></thead>"
+const SimplexRequestTableHeader = "<table><thead><tr><th>Parameter</th><th>Description</th><th>Required</th></tr></thead>"
+const SimplexResponseTableHeader = "<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead>"
 const TableOpen = "<tbody>"
 const TableClose = "</tbody></table>"
 
 const KeyAppJson = "application/json"
+
+const TextTrue = "<b>true</b>"
+const TextFalse = "<i>false</i>"
