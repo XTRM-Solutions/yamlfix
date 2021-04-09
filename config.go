@@ -49,18 +49,31 @@ func InitFlags() {
 
 	nFlags.StringP("infile", "i", "input.yaml", "name of YAML file to process")
 	nFlags.StringP("outfile", "o", "output.json", "name of processed (output) JSON file")
-	nFlags.IntP("indent", "n", 4, "Spaces to use for each indent level")
+	nFlags.IntP("indent", "n", 2, "Spaces to use for each indent level")
 	nFlags.BoolP("help", "h", false, "Display help message and usage information")
 	nFlags.BoolP("tab", "t", false, "Use tab character for indent (sets indent to one character)")
 	nFlags.BoolP("debug", "d", false,
 		"Enable additional informational and operational logging output for debug purposes")
-	nFlags.BoolP("quiet", "q", false, "Suppress superfluous output. Overrides verbose.")
+	nFlags.BoolP("quiet", "q", false, "Suppress output to stdout and stderr (output still goes to logfile)")
 	nFlags.BoolP("verbose", "v", false, "Supply informative messages")
 	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently 'SIMPLEX' only) ")
 	nFlags.BoolP("expand-references", "x", true, "Expand internal and external references in POST methods")
 	// nFlags.BoolP("prettyprint", "p", true, "Pretty-print JSON output")
 
 	err := nFlags.Parse(os.Args[1:])
+
+	// do quietness setup first
+	FlagQuiet = GetFlagBool("quiet")
+	if FlagQuiet {
+		FlagVerbose = false
+		xLog.SetOutput(xLogBuffer)
+		// shut off error messages to stderr, only log them
+	} else {
+		FlagVerbose = GetFlagBool("verbose")
+	}
+	if FlagVerbose {
+		xLog.Print("Verbose mode engaged ... ")
+	}
 
 	if nil != err {
 		xLog.Fatalf("\nerror parsing flags: %s\n%s %s\n%s\n\t%v",
@@ -97,18 +110,6 @@ func InitFlags() {
 			" ] requested.",
 			"Supported format(s) are:",
 			"SIMPLEX:\t\tdefault formatting")
-	}
-
-	FlagQuiet = GetFlagBool("quiet")
-	if FlagQuiet {
-		FlagVerbose = false
-		xLog.SetOutput(xLogBuffer)
-		// shut off error messages to stderr, only log them
-	} else {
-		FlagVerbose = GetFlagBool("verbose")
-	}
-	if FlagVerbose {
-		xLog.Print("Verbose mode engaged ... ")
 	}
 
 	if GetFlagBool("tab") {
