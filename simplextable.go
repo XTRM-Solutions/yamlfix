@@ -7,6 +7,8 @@ import (
 	oas "github.com/getkin/kin-openapi/openapi3"
 )
 
+var TableDebug bool = false
+
 // EnhanceDescriptions /* func EnhanceDescriptions (api *oas.Swagger)
 func EnhanceDescriptions(api *oas.Swagger) {
 
@@ -133,8 +135,8 @@ func MakeTableRow(paramName string, description string, required []string) (tabl
 	// table row
 	tableRow = TagDecorate(sb.String(), "tr")
 
-	// if FlagDebug {
-	//	xLog.Printf("table row: [%s]", tableRow)
-	// }
+	if TableDebug {
+		xLog.Printf("table row: [%s]", tableRow)
+	}
 	return tableRow
 }

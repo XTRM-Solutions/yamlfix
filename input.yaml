@@ -2623,7 +2623,7 @@ components:
 
     xCountry:
       description: >
-        Country: Name of the country, from 1 to 25 characters
+        Name of the country, from 1 to 25 characters
       type: string
       minLength: 01
       maxLength: 25
@@ -2631,7 +2631,7 @@ components:
 
     xCountryISO2:
       description: >
-        CountryISO2: The two-character ISO country abbreviation
+        The two-character ISO country abbreviation
       type: string
       minLength: 02
       maxLength: 02
@@ -2641,7 +2641,7 @@ components:
 
     xCurrencyCode:
       description: >
-        CurrencyCode: The three-letter ISO currency code
+        The three-letter ISO currency code
       type: string
       minLength: 3
       maxLength: 3
@@ -2659,7 +2659,7 @@ components:
 
     xRegion:
       description: >
-        Region: A jurisdiction such as state, province, or region
+        A jurisdiction such as state, province, or region
       type: string
       minLength: 01
       maxLength: 50
@@ -2963,15 +2963,9 @@ components:
       type: object
       properties:
         ProgramId:
-          description: >
-            An account-unique identifier for the program, assigned by XTRM
-          type: integer
-          example: 2316
+          $ref: "#/components/schemas/xProgramID"
         ProgramName:
-          description: >
-            An account-unique name for the program, created by the account administrator
-          type: string
-          example: Production Company
+          $ref: "#/components/schemas/xProgramName"
         ProgramCategory:
           description: >
             One of the available program categories
@@ -3136,16 +3130,19 @@ components:
         TransactionID:
           $ref: "#/components/schemas/xTransactionID"
         TransactionDate:
-          type: string
+          $ref: "#/components/schemas/xDateString"
         Currency:
           $ref: "#/components/schemas/xCurrencyCode"
         ProgramName:
-          type: string
-          example: "-"
+          $ref: "#/components/schemas/xProgramName"
         description:
+          description: >
+            Nature and explanation of transaction
           type: string
           example: "Currency Exchange"
         Type:
+          description: >
+            Type of transaction
           type: string
           example: "Debit"
         Amount:
@@ -3153,7 +3150,7 @@ components:
         Balance:
           $ref: "#/components/schemas/xAmount"
         PaymentType:
-          type: string
+          $ref: "#/components/schemas/xPaymentType"
 
     xTransactionID:
       description: >
@@ -3292,24 +3289,22 @@ components:
         ToCurrency:
           $ref: "#/components/schemas/xCurrencyCode"
         Amount:
-          description: >
-            Value of transacted currency
-          type: string
-          minLength: 01
-          maxLength: 25
-          pattern: ([0-9]*\.?[0-9]*)
-          example: "1"
+          $ref: "#/components/schemas/xAmount"
         ExchangeRate:
-          type: string
-          minLength: 01
-          maxLength: 25
-          pattern: (^[0-9]*\.?[0-9]*$)
-          example: ".7312"
+          $ref: "#/components/schemas/xCurrencyCode"
+
+    xExchangeRate:
+      description: >
+        String consisting of the ratio of the starting currency to ending currency (the rate of exchange)
+      type: string
+      minLength: 01
+      maxLength: 25
+      pattern: (^[0-9]*\.?[0-9]*$)
+      example: ".7312"
 
     xOTP:
       description: >
-        A one-time password string consisting of
-        six digits.
+        A one-time password string consisting of exactly six digits.
       type: string
       minLength: 6
       maxLength: 6
@@ -3326,17 +3321,15 @@ components:
         ProgramName:
           $ref: "#/components/schemas/xProgramName"
         TransactionDate:
-          type: string
+          $ref: "#/components/schemas/xDateString"
         description:
-          type: string
+          $ref: "#/components/schemas/xDescription"
         Amount:
           $ref: "#/components/schemas/xAmount"
         Currency:
           $ref: "#/components/schemas/xCurrencyCode"
         Type:
-          description: >
-            Type of payment
-          type: string
+          $ref: "#/components/schemas/xPaymentType"
         PaymentMethod:
           description: >
             Method of payment
@@ -3384,12 +3377,16 @@ components:
           $ref: "#/components/schemas/xComment"
 
     xDealRegId:
+      description: >
+        Person or identifier for the deal registration
       type: string
       minLength: 01
       maxLength: 25
       example: "H. Smith - Canada"
 
     xComment:
+      description: >
+        A comment on the transaction, up to 500 characters
       type: string
       minLength: 001
       maxLength: 500
@@ -3450,9 +3447,7 @@ components:
             String representing a date
           type: string
         PaymentStatus:
-          description: >
-            Status of payment
-          type: string
+          $ref: "#/components/schemas/xPaymentStatus"
         Amount:
           $ref: "#/components/schemas/xAmount"
         Fee:
@@ -3507,6 +3502,8 @@ components:
       type: object
       properties:
         BeneficiaryId:
+          description: >
+            Identity code for beneficiary
           type: string
         BeneficiaryName:
           $ref: "#/components/schemas/xName"
@@ -3717,6 +3714,18 @@ components:
       # does not rule out all impossible dates/times
       # such as '39 Feb 1000 29:29:59'
       pattern: ([0123]?\d\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Nov|Dec)\s[12]\d{3}\s[012]?\d:[0-5]\d:[0-5]\d)
+
+    xField:
+      type: object
+      properties:
+        Name:
+          description: >
+            The name of the field (equivalent to *name*:value)
+          type: string
+        Value:
+          description: >
+            The value of the field (equivalent to name:*value*)
+          type: string
 
     xEmpty:
       description: >
@@ -4124,8 +4133,7 @@ components:
             BeneficiaryAccountNumber:
               $ref: "#/components/schemas/xIAN"
             PaymentType:
-              type: string
-              example: "CALL/Credits/Debits"
+              $ref: "#/components/schemas/xPaymentType"
             FromDate:
               $ref: "#/components/schemas/xNumericDateString"
             ToDate:
@@ -4615,13 +4623,8 @@ components:
                 Field:
                   type: array
                   items:
-                    # $ref: '#/components/schemas/xField'
-                    type: object
-                    properties:
-                      Name:
-                        type: string
-                      Value:
-                        type: string
+                    $ref: '#/components/schemas/xField'
+
             OperationStatus:
               $ref: "#/components/schemas/xOpStatus"
           example:
@@ -4936,11 +4939,9 @@ components:
                     CreditTransactionID:
                       $ref: "#/components/schemas/xTransactionID"
                     PaymentDate:
-                      type: string
-                      example: "2018-05-14T00:00:00-05:00"
+                      $ref: "#/components/schemas/xDateString"
                     PaymentStatus:
-                      type: string
-                      example: "Completed"
+                      $ref: "#/components/schemas/xAmount"
                 OperationStatus:
                   $ref: "#/components/schemas/xOpStatus"
 
@@ -5030,7 +5031,7 @@ components:
                 PaymentCurrency:
                   $ref: "#/components/schemas/xCurrencyCode"
                 EmailNotification:
-                  type: boolean
+                  $ref: "#/components/schemas/xEmailNotification"
                 TransactionDetails:
                   type: array
                   items:
@@ -5119,8 +5120,7 @@ components:
               type: string
               example: "2017-11-09T03:50:22.893"
             PaymentStatus:
-              type: string
-              example: "Completed"
+              $ref: "#/components/schemas/xAmount"
             OperationStatus:
               $ref: "#/components/schemas/xOpStatus"
 
@@ -5206,8 +5206,7 @@ components:
                   type: string
                   example: "2017-11-09T03:50:22.893"
                 PaymentStatus:
-                  type: string
-                  example: "Completed"
+                  $ref: "#/components/schemas/xAmount"
                 OperationStatus:
                   $ref: "#/components/schemas/xOpStatus"
 
@@ -5534,6 +5533,8 @@ components:
               type: object
               properties:
                 WithdrawTypes:
+                  description: >
+                    How funds are withdrawn (*ACH* or *WIRE*)
                   type: array
                   items:
                     type: string
@@ -5590,15 +5591,21 @@ components:
               type: object
               properties:
                 BeneficiaryId:
+                  description: >
+                    Bank’s identifier for customer
                   # cannot REF this because this field is NULLABLE
                   nullable: true
                   type: string
                   example: "12e6f8ac19804f90be485045f50ace57"
                 BeneficiaryStatus:
+                  description: >
+                    Pending, Approved, Declined, etc.
                   nullable: true
                   type: string
                   example: Pending
                 AccountIdentityLevel:
+                  description: >
+                    Known, partially known, etc.
                   nullable: true
                   type: string
                   example: Pending
@@ -5826,6 +5833,8 @@ components:
                         type: object
                         properties:
                           CompanyType:
+                            description: >
+                              The legal structure of the company (Incorporated, Limited Liability Company, etc)
                             type: string
                       example:
                         - CompanyType: Akciju sabiedrība (AS)
@@ -6134,6 +6143,8 @@ components:
                         type: object
                         properties:
                           JobTitle:
+                            description: >
+                              Typical job title
                             type: string
                   example:
                     JobTitles:
@@ -6193,6 +6204,8 @@ components:
                         type: object
                         properties:
                           IdentificationType:
+                            description: >
+                              Name and nature of the identity document
                             type: string
                   example:
                     Identification Type:
@@ -6221,12 +6234,7 @@ components:
               type: object
               properties:
                 CountryCode:
-                  type: string
-                  minLength: 02
-                  maxLength: 02
-                  pattern: ([a-zA-Z]{2})
-                  example: US
-                  # ISO2 code for United States
+                  $ref: "#/components/schemas/xCountryISO2"
 
     CompanyAdvancedProfileStatusRequest:
       type: object
@@ -6347,9 +6355,9 @@ components:
             type: object
             properties:
               CategoryID:
-                type: integer
+                $ref: "#/components/schemas/xProgramCategoryID"
               CategoryName:
-                type: string
+                $ref: "#/components/schemas/xCategoryProgramName"
           example:
             - CategoryID: 1
               CategoryName: Promotional
@@ -6359,6 +6367,17 @@ components:
               CategoryName: Project
             - CategoryID: 8
               CategoryName: Other
+
+    xCategoryProgramName:
+      description: >
+        A user-friendly display name for the category or subcategory
+      type: string
+
+    xPaymentStatus:
+      description: >
+        Status of payment, *completed*, *pending*, etc.
+      type: string
+      example: "Pending"
 
     xProgramCategoryID:
       minLength: 1
@@ -6409,9 +6428,9 @@ components:
                         type: object
                         properties:
                           SubCategoryID:
-                            type: integer
+                            $ref: "#/components/schemas/xProgramCategoryID"
                           SubCategoryName:
-                            type: string
+                            $ref: "#/components/schemas/xCategoryProgramName"
                   example:
                     ProgramType:
                       ProgramTypeDetail:
@@ -6457,18 +6476,16 @@ components:
                 description:
                   $ref: "#/components/schemas/xHundredCharString"
                 TransactionCategoryID:
-                  type: string
-                  minLength: 1
-                  maxLength: 5
+                  $ref: "#/components/schemas/xProgramCategoryID"
                 TransactionSubCategoryID:
-                  type: string
-                  minLength: 1
-                  maxLength: 5
+                  $ref: "#/components/schemas/xProgramCategoryID"
                 Amount:
                   $ref: "#/components/schemas/xAmount"
                 CurrencyCode:
                   $ref: "#/components/schemas/xCurrencyCode"
                 IsClaim:
+                  description: >
+                    True or false code 
                   type: boolean
 
     CreateProgramResponse:
@@ -6481,8 +6498,7 @@ components:
               type: object
               properties:
                 ProgramID:
-                  type: integer
-                  example: 2314
+                  $ref: "#/components/schemas/xProgramID"
                 OperationStatus:
                   $ref: "#/components/schemas/xOpStatus"
 
@@ -6522,6 +6538,8 @@ components:
                 CurrencyCode:
                   $ref: "#/components/schemas/xCurrencyCode"
                 IsClaim:
+                  description: >
+                    True or false code for request
                   type: boolean
                   example: true
 
@@ -6535,7 +6553,7 @@ components:
               type: object
               properties:
                 ProgramID:
-                  type: string
+                  $ref: "#/components/schemas/xProgramID"
                 OperationStatus:
                   $ref: "#/components/schemas/xOpStatus"
 
@@ -6570,6 +6588,8 @@ components:
               type: object
               properties:
                 Message:
+                  description: >
+                    Status or description
                   type: string
                   example: "OTP Send"
                 OperationStatus:
@@ -6609,6 +6629,8 @@ components:
               type: object
               properties:
                 Message:
+                  description: >
+                    Status or description of result (*Authorized*).
                   type: string
                   example: "Authorized"
                 OperationStatus:
@@ -6665,8 +6687,7 @@ components:
                 PaymentDate:
                   $ref: "#/components/schemas/xDate"
                 PaymentStatus:
-                  type: string
-                  example: Pending
+                  $ref: "#/components/schemas/xPaymentStatus"
                 OperationStatus:
                   $ref: "#/components/schemas/xOpStatus"
 
@@ -6737,8 +6758,12 @@ components:
                   items:
                     properties:
                       Name:
+                        description: >
+                          The name of the field (equivalent to *name*:value)
                         type: string
                       Value:
+                        description: >
+                          The value of the field (equivalent to name:*value*)
                         type: string
                   example:
                     - Name: "Transfer Type"
@@ -6883,6 +6908,8 @@ components:
               type: object
               properties:
                 Status:
+                  description: >
+                    Whether the beneficiary is connected, pending, or not connected
                   type: string
                   example: "Not Connected"
                 OperationStatus:
@@ -6906,8 +6933,12 @@ components:
                         type: object
                         properties:
                           UserPaymentMethodID:
+                            description: >
+                              An ID code (available via the API) for this payment method
                             type: string
                           UserPaymentMethodName:
+                            description: >
+                              A user-friendly description of the payment method (*Bank*, *Prepaid Virtual Debit Card*, etc.)
                             type: string
                       example:
                         - UserPaymentMethodID: "XTR94500"
@@ -7580,8 +7611,12 @@ components:
                         type: object
                         properties:
                           StateCode:
+                            description: >
+                              Two letter abbreviation for state
                             type: string
                           StateName:
+                            description: >
+                              Full name of state
                             type: string
                   example:
                     AdvancedContactState:
@@ -7721,6 +7756,8 @@ components:
                         type: object
                         properties:
                           Industry:
+                            description: >
+                              A general taxonomic identification of the business (Accommodation, utilities, etc.)
                             type: string
 
                   example:
