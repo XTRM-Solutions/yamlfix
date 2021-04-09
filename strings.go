@@ -2,6 +2,7 @@ package main
 
 // why this? Because Changing the header level
 // is now a one-variable change
+
 const HeaderLevel = "3"
 const HeaderOpen = "<h" + HeaderLevel + ">"
 const HeaderClose = "</h" + HeaderLevel + ">"
