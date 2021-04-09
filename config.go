@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"io"
 	"log"
@@ -12,6 +13,8 @@ import (
 )
 
 var xLogFile *os.File
+var xLogBuffer *bufio.Writer
+
 var xLog log.Logger
 
 /* var FlagPretty bool  */
@@ -31,9 +34,9 @@ func InitLog() {
 	if nil != err {
 		xLog.Fatalf("error opening file: %v", err)
 	}
-
+	xLogBuffer = bufio.NewWriter(xLogFile)
 	logWriters = append(logWriters, os.Stderr)
-	logWriters = append(logWriters, xLogFile)
+	logWriters = append(logWriters, xLogBuffer)
 
 	out := io.MultiWriter(logWriters...)
 	xLog.SetFlags(log.Ldate | log.Ltime | log.LUTC | log.Lshortfile)
@@ -46,10 +49,10 @@ func InitFlags() {
 
 	nFlags.StringP("infile", "i", "input.yaml", "name of YAML file to process")
 	nFlags.StringP("outfile", "o", "output.json", "name of processed (output) JSON file")
-	nFlags.IntP("indent", "n", 2, "Spaces to use for each indent level")
+	nFlags.IntP("indent", "n", 4, "Spaces to use for each indent level")
 	nFlags.BoolP("help", "h", false, "Display help message and usage information")
 	nFlags.BoolP("tab", "t", false, "Use tab character for indent (sets indent to one character)")
-	nFlags.BoolP("debug", "d", true,
+	nFlags.BoolP("debug", "d", false,
 		"Enable additional informational and operational logging output for debug purposes")
 	nFlags.BoolP("quiet", "q", false, "Suppress superfluous output. Overrides verbose.")
 	nFlags.BoolP("verbose", "v", true, "Supply informative messages")
@@ -77,7 +80,7 @@ func InitFlags() {
 
 	formatStr := strings.ToLower(GetFlagString("format"))
 	if FlagDebug {
-		_, _ = fmt.Fprintf(os.Stderr, "format style: got %s format mode\n", formatStr)
+		xLog.Printf("format style: got %s format mode\n", formatStr)
 	}
 	switch formatStr {
 	case "simplex":
@@ -97,11 +100,13 @@ func InitFlags() {
 	FlagQuiet = GetFlagBool("quiet")
 	if FlagQuiet {
 		FlagVerbose = false
+		xLog.SetOutput(xLogBuffer)
+		// shut off error messages to stderr, only log them
 	} else {
 		FlagVerbose = GetFlagBool("verbose")
 	}
 	if FlagVerbose {
-		_, _ = fmt.Fprint(os.Stdout, "\nVerbose Mode Engaged\n")
+		xLog.Print("Verbose mode engaged ... ")
 	}
 
 	if GetFlagBool("tab") {
@@ -110,7 +115,17 @@ func InitFlags() {
 			xLog.Print("Using single tab for indent, indent flag ignored")
 		}
 	} else {
-		FlagIndentString = strings.Repeat(" ", GetFlagInt("indent"))
+		ind := GetFlagInt("indent")
+		if MaxIndent < ind {
+			xLog.Printf("Huh? Indent set too big (%d) resetting to MaxIndent value %d", ind, MaxIndent)
+			ind = MaxIndent
+		} else {
+			if MinIndent > ind {
+				xLog.Printf("Huh? Indent set too small (%d) resetting to MinIndent value %d", ind, MinIndent)
+				ind = MinIndent
+			}
+		}
+		FlagIndentString = strings.Repeat(" ", ind)
 	}
 }
 

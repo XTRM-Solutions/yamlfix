@@ -2,3 +2,6 @@ google-java-format.xml
 vcs.xml
 google-java-format.xml
 yamlfix.log
+/debug_post_reference_output.json
+/debug_pre_output.json
+/output.json

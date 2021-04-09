@@ -1,1 +1,2 @@
-2021/04/09 20:31:44 yamlfix.go:37: Writing output file dereferenced, and unmodified file as debug_post_reference_
+2021/04/09 20:50:37 config.go:110: Using single tab for indent, indent flag ignored
+2021/04/09 20:50:37 yamlfix.go:36: Writing output file dereferenced, and unmodified file as debug_post_reference_

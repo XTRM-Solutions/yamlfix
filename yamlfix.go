@@ -14,6 +14,7 @@ import (
 func main() {
 	InitLog()
 	defer DeferError(xLogFile.Close)
+	defer DeferError(xLogBuffer.Flush)
 	InitFlags()
 
 	xApi, err := oas.NewSwaggerLoader().LoadSwaggerFromFile(GetFlagString("infile"))
