@@ -55,7 +55,7 @@ func InitFlags() {
 	nFlags.BoolP("debug", "d", false,
 		"Enable additional informational and operational logging output for debug purposes")
 	nFlags.BoolP("quiet", "q", false, "Suppress superfluous output. Overrides verbose.")
-	nFlags.BoolP("verbose", "v", true, "Supply informative messages")
+	nFlags.BoolP("verbose", "v", false, "Supply informative messages")
 	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently 'SIMPLEX' only) ")
 	nFlags.BoolP("expand-references", "x", true, "Expand internal and external references in POST methods")
 	// nFlags.BoolP("prettyprint", "p", true, "Pretty-print JSON output")
@@ -63,8 +63,11 @@ func InitFlags() {
 	err := nFlags.Parse(os.Args[1:])
 
 	if nil != err {
-		_, _ = fmt.Fprintf(os.Stderr, "\nerror parsing flags: %s\n", err.Error())
-		os.Exit(-1)
+		xLog.Fatalf("\nerror parsing flags: %s\n%s %s\n%s\n\t%v",
+			err.Error(), "common issue: 2 hyphens for long-form arguments,",
+			"1 hyphen for short-form argument",
+			"Program arguments are:",
+			os.Args)
 	}
 
 	FlagDebug = GetFlagBool("debug")
@@ -87,14 +90,13 @@ func InitFlags() {
 		break
 	default:
 		UsageMessage()
-		_, _ = fmt.Fprintf(os.Stdout,
+		xLog.Fatalf(
 			"%s%s%s\n\t%s\n\t\t%s\n",
 			"Bad/unknown format [ ",
 			formatStr,
 			" ] requested.",
 			"Supported format(s) are:",
 			"SIMPLEX:\t\tdefault formatting")
-		os.Exit(-1)
 	}
 
 	FlagQuiet = GetFlagBool("quiet")
@@ -131,7 +133,7 @@ func InitFlags() {
 
 // UsageMessage /* UsageMessage
 func UsageMessage() {
-	_, _ = fmt.Println("\n\tInformative Usage Message Here")
+	_, _ = fmt.Println("\n\tInsert Informative Usage Message Here")
 }
 
 // GetFlagBool /* GetFlagBool(key string) (value string)
