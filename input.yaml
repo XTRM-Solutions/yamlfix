@@ -4013,6 +4013,8 @@ components:
         UserID:
           $ref: "#/components/schemas/xIAN"
         AccountIdentityLevel:
+          description: >
+            Known, partially known, etc.
           type: string
           example: "Pending"
         OperationStatus:
@@ -5117,8 +5119,7 @@ components:
           type: object
           properties:
             PaymentDate:
-              type: string
-              example: "2017-11-09T03:50:22.893"
+              $ref: "#/components/schemas/xDateString"
             PaymentStatus:
               $ref: "#/components/schemas/xAmount"
             OperationStatus:
@@ -5203,8 +5204,7 @@ components:
                 BeneficiaryAccountNumber:
                   $ref: "#/components/schemas/xIAN"
                 PaymentDate:
-                  type: string
-                  example: "2017-11-09T03:50:22.893"
+                  $ref: "#/components/schemas/xDateString"
                 PaymentStatus:
                   $ref: "#/components/schemas/xAmount"
                 OperationStatus:
@@ -5537,6 +5537,8 @@ components:
                     How funds are withdrawn (*ACH* or *WIRE*)
                   type: array
                   items:
+                    description: >
+                      How funds are withdrawn (*ACH* or *WIRE*)
                     type: string
                   example:
                     - WIRE
@@ -5655,14 +5657,20 @@ components:
               properties:
                 BeneficiaryId:
                   # cannot REF this because this field is NULLABLE
+                  description: >
+                    Bank-dependent ID for beneficiary
                   nullable: true
                   type: string
                   example: "12e6f8ac19804f90be485045f50ace57"
                 BeneficiaryStatus:
+                  description: >
+                    Pending, Approved, Declined, etc.
                   nullable: true
                   type: string
                   example: Pending
                 AccountIdentityLevel:
+                  description: >
+                    Known, partially known, etc.
                   nullable: true
                   type: string
                   example: Pending
@@ -5773,7 +5781,8 @@ components:
                 BeneficiaryID:
                   $ref: "#/components/schemas/xIAN"
                 AccountIdentityLevel:
-                  type: string
+                  description: >
+                    Known, partially known, etc.
                 ClientID:
                   $ref: "#/components/schemas/xAPIID"
                 SecretKey:
@@ -6380,6 +6389,8 @@ components:
       example: "Pending"
 
     xProgramCategoryID:
+      description: >
+        Identification code for category or subcategory
       minLength: 1
       maxLength: 5
       type: string
@@ -6979,6 +6990,8 @@ components:
           type: object
           properties:
             GetPrepaidCardsResult:
+              description: >
+                *There is no documentation on the result of GetPrepaidCardsResult*
               type: string
               example: "There is no documentation on the result of GetPrepaidCardsResult"
 
@@ -7010,6 +7023,8 @@ components:
           type: object
           properties:
             GetPrepaidCardDetailsResult:
+              description: >
+                *There is no documentation on the result of GetPrepaidCardsResult*
               type: string
               example: "There is no documentation on the result of GetPrepaidCardsResult"
 
@@ -7072,6 +7087,8 @@ components:
                           CountryCode:
                             $ref: "#/components/schemas/xCountryISO2"
                           CountryName:
+                            description: >
+                              The full name of the country
                             type: string
                   example:
                     AdvancedContactCountry:
