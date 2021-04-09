@@ -1,6 +1,10 @@
 package main
 
 import (
+	"bufio"
+	"bytes"
+	"encoding/json"
+	"io"
 	"os"
 	"path/filepath"
 
@@ -52,6 +56,11 @@ func main() {
 
 func writeJsonOASFile(api *oas.Swagger, fileName string) {
 
+	if FlagPretty {
+		writePrettyJsonOASFile(api, fileName)
+		return
+	}
+
 	output, err := api.MarshalJSON()
 	if nil != err {
 		xLog.Fatalf("Attempting to reconstruct API spec failed because: %s", err.Error())
@@ -65,6 +74,7 @@ func writeJsonOASFile(api *oas.Swagger, fileName string) {
 	defer DeferError(outFile.Close)
 
 	byteCount, err := outFile.Write(output)
+
 	if nil != err {
 		xLog.Fatalf("Failed writing output file %s because: %s",
 			fileName, err.Error())
@@ -84,6 +94,42 @@ func writeJsonOASFile(api *oas.Swagger, fileName string) {
 			xLog.Fatalf("Failed to get absolute path for %s", fileName)
 		}
 		xLog.Printf("Writing output to file %s", filePath)
+	}
+
+}
+
+func writePrettyJsonOASFile(api *oas.Swagger, fileName string) {
+	output, err := api.MarshalJSON()
+	if nil != err {
+		xLog.Fatalf("Attempting to reconstruct API spec failed because: %s", err.Error())
+	}
+
+	src := bufio.NewReader(bytes.NewReader(output))
+	decJson := json.NewDecoder(src)
+
+	outFile, err := os.Create(fileName)
+	if nil != err {
+		xLog.Fatalf("Failed to create file %s because %s",
+			fileName, err.Error())
+	}
+	defer DeferError(outFile.Close)
+	bufferOutFile := bufio.NewWriter(outFile)
+	defer DeferError(bufferOutFile.Flush)
+	encJson := json.NewEncoder(bufferOutFile)
+
+	encJson.SetIndent("", "  ")
+	encJson.SetEscapeHTML(false)
+
+	var m map[string]interface{}
+	err = nil
+	for ; nil == err; err = encJson.Encode(&m) {
+		err = decJson.Decode(&m)
+		if nil != err {
+			break
+		}
+	}
+	if io.EOF != err {
+		xLog.Fatal("Error in ")
 	}
 
 }
