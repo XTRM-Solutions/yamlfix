@@ -1,4 +1,1 @@
-2021/04/09 19:22:18 yamlfix.go:86: Writing output to file h:\intellij\go\src\yamlfix\debug_pre_output.json
-2021/04/09 19:22:18 yamlfix.go:33: Writing output file dereferenced, and unmodified file as debug_post_reference_
-2021/04/09 19:22:18 yamlfix.go:86: Writing output to file h:\intellij\go\src\yamlfix\debug_post_reference_output.json
-2021/04/09 19:22:18 yamlfix.go:86: Writing output to file h:\intellij\go\src\yamlfix\output.json
+2021/04/09 20:31:44 yamlfix.go:37: Writing output file dereferenced, and unmodified file as debug_post_reference_

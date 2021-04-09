@@ -14,8 +14,10 @@ import (
 var xLogFile *os.File
 var xLog log.Logger
 
-var FlagPretty bool
-var FlagDeref bool
+/* var FlagPretty bool  */
+
+var FlagIndentString string
+var FlagDereference bool
 var FlagDebug bool
 var FlagVerbose bool
 var FlagQuiet bool
@@ -44,16 +46,16 @@ func InitFlags() {
 
 	nFlags.StringP("infile", "i", "input.yaml", "name of YAML file to process")
 	nFlags.StringP("outfile", "o", "output.json", "name of processed (output) JSON file")
-	// nFlags.IntP("indent", "n", 2, "Spaces to use for each indent level")
+	nFlags.IntP("indent", "n", 2, "Spaces to use for each indent level")
 	nFlags.BoolP("help", "h", false, "Display help message and usage information")
-	// nFlags.BoolP("tab", "t", false, "Use tab character for indent (sets indent to one character)")
+	nFlags.BoolP("tab", "t", false, "Use tab character for indent (sets indent to one character)")
 	nFlags.BoolP("debug", "d", true,
 		"Enable additional informational and operational logging output for debug purposes")
 	nFlags.BoolP("quiet", "q", false, "Suppress superfluous output. Overrides verbose.")
 	nFlags.BoolP("verbose", "v", true, "Supply informative messages")
 	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently 'SIMPLEX' only) ")
 	nFlags.BoolP("expand-references", "x", true, "Expand internal and external references in POST methods")
-	nFlags.BoolP("prettyprint", "p", true, "Pretty-print JSON output")
+	// nFlags.BoolP("prettyprint", "p", true, "Pretty-print JSON output")
 
 	err := nFlags.Parse(os.Args[1:])
 
@@ -63,8 +65,8 @@ func InitFlags() {
 	}
 
 	FlagDebug = GetFlagBool("debug")
-	FlagDeref = GetFlagBool("expand-references")
-	FlagPretty = GetFlagBool("prettyprint")
+	FlagDereference = GetFlagBool("expand-references")
+	// FlagPretty = GetFlagBool("prettyprint")
 
 	if GetFlagBool("help") {
 		_, thisCmd := filepath.Split(os.Args[0])
@@ -98,9 +100,17 @@ func InitFlags() {
 	} else {
 		FlagVerbose = GetFlagBool("verbose")
 	}
-
 	if FlagVerbose {
 		_, _ = fmt.Fprint(os.Stdout, "\nVerbose Mode Engaged\n")
+	}
+
+	if GetFlagBool("tab") {
+		FlagIndentString = "\t"
+		if FlagVerbose {
+			xLog.Print("Using single tab for indent, indent flag ignored")
+		}
+	} else {
+		FlagIndentString = strings.Repeat(" ", GetFlagInt("indent"))
 	}
 }
 
@@ -114,7 +124,7 @@ func GetFlagBool(key string) (value bool) {
 	var err error
 	value, err = nFlags.GetBool(key)
 	if nil != err {
-		xLog.Printf("error fetching value for boolean flag [ %s ]\n", key)
+		xLog.Fatalf("error fetching value for boolean flag [ %s ]\n", key)
 		return false
 	}
 	return value
@@ -125,23 +135,19 @@ func GetFlagString(key string) (value string) {
 	var err error
 	value, err = nFlags.GetString(key)
 	if nil != err {
-		xLog.Printf("error fetching value for string flag [ %s ]\n", key)
+		xLog.Fatalf("error fetching value for string flag [ %s ]\n", key)
 		return ""
 	}
 	return value
 }
 
-/* GetFlagInt(key string) (value int)
-Return a flag with string value
-*/
-/*
+// GetFlagInt fetch the value of integer flag
 func GetFlagInt(key string) (value int) {
 	var err error
 	value, err = nFlags.GetInt(key)
 	if nil != err {
-		xLog.Printf("error fetching value for integer flag [ %s ]\n", key)
+		xLog.Fatalf("error fetching value for integer flag [ %s ]\n", key)
 		return 0
 	}
 	return value
 }
-*/
