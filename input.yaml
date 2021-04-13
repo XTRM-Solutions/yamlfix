@@ -1801,10 +1801,9 @@ paths:
       operationId: DeleteBankBeneficiary
       summary: Delete a beneficiary’s linked bank
       description: >
-        Delete a beneficiary’s linked bank.
+        <p>Delete a beneficiary’s linked bank.
         Get the required `BankBeneficiaryID` from the
         `GetLinkedBankAccounts` API call.</p>
-
       tags:
         - Banks
       requestBody:
@@ -3179,7 +3178,7 @@ components:
 
     xCVV:
       description: >
-        **C**ard **V**erification **V**alue, a three or four digit number
+        <b>C</b>ard <b>V</b>erification <b>V</b>alue, a three or four digit number
         serving as a verifier for the credit card’s legitimacy
       type: string
       minLength: 3
@@ -3209,7 +3208,7 @@ components:
 
     xSKU:
       description: >
-        Identifier for
+        Identifier for purchase code
       type: string
       minLength: 7
       maxLength: 7
