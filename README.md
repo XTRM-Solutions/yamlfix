@@ -1,7 +1,7 @@
 # YAMLFIX
 
 **YAMLFIX supports the OpenAPI Specification Version 3.0.*
-x***
+x* **
 
 Postman is a fantastic tool for implementing and testing API
 integrations allowing various platforms to take advantage of
