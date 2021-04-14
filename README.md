@@ -40,8 +40,8 @@ This program was developed and tested under Windows.
   see [git-scm.com](https://git-scm.com/) for details
 - Open a command console
 - Execute `cd %GOPATH\src`
--
-Execute `git clone https://<YOUR_GITHUB_USERNAME>:<YOUR_GITHUB_TOKEN>@github.com/XTRM-Solutions/yamlfix.git`
+- Execute
+  `git clone https://<YOUR_GITHUB_USERNAME>:<YOUR_GITHUB_TOKEN>@github.com/XTRM-Solutions/yamlfix.git`
 
 - Execute `cd ./YAMLFIX`
 - Execute `go install` This will compile the program, and
