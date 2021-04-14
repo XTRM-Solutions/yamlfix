@@ -1,7 +1,7 @@
 # YAMLFIX
 
 **YAMLFIX supports the OpenAPI Specification Version 3.0.*
-x* **
+x***
 
 Postman is a fantastic tool for implementing and testing API
 integrations allowing various platforms to take advantage of
@@ -30,6 +30,8 @@ out the parameters and their definitions. Secondly, it fully
 expands the references for each call, allowing Postman to
 generate complete example schemas.
 
+This program was developed and tested under Windows.
+
 ## Installing YAMLFIX
 
 - A Go environment must be installed; please
@@ -39,13 +41,12 @@ generate complete example schemas.
 - Open a command console
 - Execute `cd %GOPATH\src`
 -
-
 Execute `git clone https://<YOUR_GITHUB_USERNAME>:<YOUR_GITHUB_TOKEN>@github.com/XTRM-Solutions/yamlfix.git`
 
 - Execute `cd ./YAMLFIX`
-- Execute `go install`  this will compile the program, and
-  place the executable into the `%GOROOT%/bin` directory (
-  installing Go itself should set both `GOPATH` and `GOROOT`
+- Execute `go install` This will compile the program, and
+  place the executable into the `%GOROOT%/bin` directory.
+  Installing Go itself should set both `GOPATH` and `GOROOT`
   environment variables).
 
 ## Usage

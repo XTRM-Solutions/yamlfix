@@ -1,12 +1,20 @@
 package main
 
+/*************************
+This all works very simply because the openapi3 toolkit tracks
+(and creates and removes) references in a 2-layer ref/value
+structure. A NIL ref means that this is NOT a reference; a
+non-NIL reference means, create this as the specified reference.
+Therefore, to 'strip' references, rather than copy & pasting
+trees and maps and submaps into maps and trees and yet more
+submaps, one need only clear the Ref string.
+SO MUCH EASY! THANK YOU OPENAPI LIBRARY!
+*/
+
 import (
 	oas "github.com/getkin/kin-openapi/openapi3"
 	// https://pkg.go.dev/github.com/getkin/kin-openapi@v0.53.0/openapi3
 )
-
-// StripReferences Remove the reference pointers so that
-// UnMarshal expands everything.
 
 // StripReferences
 // Remove the reference pointer from the loaded OAS data
@@ -22,34 +30,10 @@ func StripReferences(api *oas.Swagger) {
 	}
 }
 
-// StripOperationReferences
-// For a given oas.Operation, remove the references
-// within it (not really a public function)
-func StripOperationReferences(op *oas.Operation) {
-	if nil == op {
-		return
-	}
-	op.RequestBody.Ref = ""
-	for _, val02 := range op.RequestBody.Value.Content {
-		StripReferencesSchema(val02.Schema)
-	}
-	for _, val03 := range op.Responses {
-		val03.Ref = ""
-		for _, val04 := range val03.Value.Content {
-			StripReferencesSchema(val04.Schema)
-		}
-	}
-	for _, val05 := range op.Callbacks {
-		val05.Ref = ""
-		for _, val06 := range *val05.Value {
-			StripPathItem(val06)
-		}
-	}
-}
-
 // StripPathItem
-// For a given oas.PathItem (an Operation), remove the references
-// within it (not really a public function)
+// For a given oas.PathItem, remove the references
+// within it. Since all the references occur within
+// an Operation ... just clear the Operations
 func StripPathItem(item *oas.PathItem) {
 	if nil == item {
 		return
@@ -65,9 +49,36 @@ func StripPathItem(item *oas.PathItem) {
 	StripOperationReferences(item.Trace)
 }
 
+// StripOperationReferences
+// For a given oas.Operation, remove the references
+// within it. That consists of cleaning the Schema
+// references and callbacks (which are Pathitems)
+func StripOperationReferences(op *oas.Operation) {
+	if nil == op {
+		return
+	}
+	op.RequestBody.Ref = ""
+	for _, val01 := range op.RequestBody.Value.Content {
+		StripReferencesSchema(val01.Schema)
+	}
+	for _, val02 := range op.Responses {
+		val02.Ref = ""
+		for _, val03 := range val02.Value.Content {
+			StripReferencesSchema(val03.Schema)
+		}
+	}
+	for _, val04 := range op.Callbacks {
+		val04.Ref = ""
+		for _, val05 := range *val04.Value {
+			StripPathItem(val05)
+		}
+	}
+}
+
 // StripReferencesSchema Eventually, whatever reference
 // paths an OAS file has comes down to schema references,
-// and this recursively clears those references
+// and this recursively clears those schemas as well as
+// all the schema references within
 func StripReferencesSchema(schema *oas.SchemaRef) {
 	if nil == schema {
 		return
