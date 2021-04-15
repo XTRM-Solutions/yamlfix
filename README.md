@@ -1,7 +1,7 @@
 # YAMLFIX
 
-**YAMLFIX supports the OpenAPI 
-Specification Version 3.0.*x***
+**YAMLFIX supports the OpenAPI Specification Version 3.0.*
+x***
 
 Postman is a fantastic tool for implementing and testing API
 integrations allowing various platforms to take advantage of
@@ -47,7 +47,7 @@ This program was developed and tested under Windows.
 - Execute `go install` This will compile the program, and
   place the executable into the `%GOROOT%/bin` directory.
   Installing Go itself should set both `GOPATH` and `GOROOT`
-  environment variables).
+  environment variables.
 
 ## Usage
 
