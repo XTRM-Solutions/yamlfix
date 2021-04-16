@@ -30,7 +30,9 @@ func main() {
 		writeJsonOASFile(xApi, "debug_pre_"+GetFlagString("outfile"))
 	}
 
-	EnhanceDescriptions(xApi)
+	if !FlagNoTables {
+		EnhanceDescriptions(xApi)
+	}
 
 	if FlagDereference {
 		if FlagDebug {
