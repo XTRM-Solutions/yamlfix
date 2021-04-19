@@ -2,7 +2,7 @@ openapi: 3.0.3
 
 info:
   title: XTRM Payments API
-  version: 4.6.0
+  version: 4.8.0
   description: >
     The XTRM Payments API
   termsOfService: "https://www.xtrm.com/web/Participant/Profile/TermsPopup.aspx"
@@ -147,6 +147,97 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/xErrorDefault"
+
+  /Register/CompanyAdvancedProfileDetails:
+    post:
+      deprecated: true
+      operationId: CompanyAdvancedProfileDetails
+      summary: Fetch the advanced profile details for this or a connected company
+      description: >
+        ***Deprecated.***
+        This API fetches the advanced profile details for a company for
+        which your account has read access (either your company, or a
+        connected company). **This call’s parameters will be changed
+        in the next release as a breaking change.**
+      tags:
+        - Beneficiary Company
+
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CompanyAdvancedProfileDetailsRequest"
+
+      responses:
+        "200":
+          description: >
+            Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CompanyAdvancedProfileDetailsResponse"
+
+        default:
+          description: >
+            Error response
+          content:
+            application/json:
+              schema:
+                $ref: "/components/schemas/xErrorDefault"
+
+
+
+
+  /Register/CompanyAdvancedProfile:
+    post:
+      deprecated: true
+      operationId: CompanyAdvancedProfile
+      summary: Create a beneficiary account
+      description: >
+        ***Deprecated.***
+        This API calls allows you to fill and
+        submit your or your connected company’s
+        Advanced Profile. There are 4 sections in the advanced profile.
+        Business Entity Information, Authorized Contact Information,
+        Director Information, and Ownership Information.
+        If you are completing this form for a US company,
+        you must complete Business Entity Information and
+        Authorized Contact Information; the rest of the sections
+        are not required. If you are completing this form for
+        a non US company, you must complete all the four sections
+        (Business entity, Authorized contact, Director
+        and Ownership information).
+         **This call’s parameters will be changed
+        in the next release as a breaking change.**
+      tags:
+        - Beneficiary Company
+
+      requestBody:
+        description: >
+          Profile information request
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CompanyAdvancedProfileRequest"
+
+      responses:
+        "200":
+          description: >
+            success
+          content:
+            application/json:
+              schema:
+                $ref: "/components/schemas/CompanyAdvancedProfileResponse"
+        default:
+          description: >
+            Error Response
+          content:
+            application/json:
+              schema:
+                $ref: "/components/schemas/xErrorDefault"
+
+
 
   /Register/CreateUser:
     post:
@@ -2505,6 +2596,149 @@ components:
           Error: "Error Message"
           Error_Description: "Error Description"
 
+    xAuthorizedContactInformation:
+      type: object
+      required:
+        - First_Name
+        - Last_Name
+        - Email_Address
+        - Address_1
+        - City
+        - Region_Code2
+        - Country_Code2
+        - Postal_Code
+      properties:
+        Job_Title:
+          $ref: "#/components/schemas/x255CharString"
+        First_Name:
+          $ref: "#/components/schemas/x255CharString"
+        Last_Name:
+          $ref: "#/components/schemas/x255CharString"
+        Middle_Name:
+          $ref: "#/components/schemas/x255CharString"
+        Gender:
+          type: string
+          minLength: 5
+          maxLength: 6
+          example: "Female"
+        Email_Address:
+          $ref: "#/components/schemas/xEmail"
+        Date_Of_Birth:
+          $ref: "#/components/schemas/xNumericDateString"
+        Citizenship:
+          $ref: "#/components/schemas/x255CharString"
+        Identification_Type:
+          $ref: "#/components/schemas/x255CharString"
+        Identification_Number:
+          $ref: "#/components/schemas/x255CharString"
+        Issue_Date:
+          $ref: "#/components/schemas/xNumericDateString"
+        Expiration_Date:
+          $ref: "#/components/schemas/xNumericDateString"
+        Issuing_Agency:
+          $ref: "#/components/schemas/x255CharString"
+        Address_1:
+          $ref: "#/components/schemas/x255CharString"
+        City:
+          $ref: "#/components/schemas/x255CharString"
+        Region_Code2:
+          $ref: "#/components/schemas/xRegion_Code2"
+        Country_Code2:
+          $ref: "#/components/schemas/xCountryIS02"
+        Postal_Code:
+          $ref: "#/components/schemas/x255CharString"
+        Business_Phone:
+          $ref: "#/components/schemas/x255CharString"
+
+    xWebUrl:
+      type: string
+      pattern: ^((ftp|http|https):\/\/)?(www.)?(?!.*(ftp|http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?
+      example: "https://www.xtrm.com"
+      minLength: 1
+      maxLength: 100
+
+    xBusinessEntityInformation:
+      type: object
+      required:
+        - Region_Of_Incorporation
+        - Country_Of_Incorporation_Code2
+        - Tax_Indentification_Number
+        - Address_Line_1
+        - City
+        - Country_Code2
+        - Region_Code2
+        - Postal_Code
+      properties:
+        Legal_Company_Name:
+          $ref: "#/components/schemas/xCompanyName"
+        FictitiousName:
+          $ref: "#/components/schemas/xCompanyName"
+        Website:
+          $ref: "#/components/schemas/xWebUrl"
+        Company_Type:
+          $ref: "#/components/schemas/xHundredCharString"
+        Industry_Classification:
+          description: >
+            A general taxonomic identification of the business (Accommodation, utilities, etc.)
+          type: string
+          example: "Use 'GetNAICS' to get acceptable industry information"
+        Date_Of_Registration:
+          $ref: "#/components/schemas/xNumericDateString"
+        Region_Of_Incorporation:
+          $ref: "#/components/schemas/xHundredCharString"
+        Ticker_Symbol:
+          $ref: "#/components/schemas/xFiftyCharString"
+        Tax_Identification_Number:
+          $ref: "#/components/schemas/xTaxId"
+        Address_Line_1:
+          $ref: "#/components/schemas/xAddressLine"
+        Address_Line_2:
+          $ref: "#/components/schemas/xAddressLine"
+        Address_Line_3:
+          $ref: "#/components/schemas/xAddressLine"
+        City:
+          $ref: "#/components/schemas/xCity"
+        Country_Code2:
+          $ref: "#/components/schemas/xCountryISO2"
+        Region_Code2:
+          $ref: "#/components/schemas/xRegion_Code2"
+        Postal_Code:
+          $ref: "#/components/schemas/xPostalCode"
+        Number_Of_Employees:
+          $ref: "#/components/schemas/xNumericStringSix"
+        Expected_Monthly_Payments:
+          $ref: "#/components/schemas/xNumericStringTen"
+        Expected_Monthly_Volume:
+          $ref: "#/components/schemas/xNumericStringTen"
+        Purpose_Of_Payments:
+          $ref: "#/components/schemas/x255CharString"
+
+    xRegion_Code2:
+      type: string
+      minLength: 2
+      maxLength: 2
+      example: "CA"
+
+    x255CharString:
+      type: string
+      minLength: 1
+      maxLength: 255
+      example: "A string of at most two hundred and fifty-five (255) characters"
+
+    xNumericStringTen:
+      type: string
+      minLength: 1
+      maxLength: 10
+      pattern: ^\d{1,10}$
+      example: "850000"
+
+    xNumericStringSix:
+      type: string
+      minLength: 1
+      maxLength: 6
+      pattern: ^\d{1,6}$
+      example: "850000"
+
     xName:
       description: >
         A string from 2 to 40 characters in length
@@ -3178,7 +3412,7 @@ components:
 
     xCVV:
       description: >
-        <b>C</b>ard <b>V</b>erification <b>V</b>alue, a three or four digit number
+        Card Verification Value (**CVV**), a three or four digit number
         serving as a verifier for the credit card’s legitimacy
       type: string
       minLength: 3
@@ -6748,11 +6982,14 @@ components:
               required:
                 - IssuerAccountNumber
                 - TransactionID
+                - UserID
               properties:
                 IssuerAccountNumber:
                   $ref: "#/components/schemas/xIAN"
                 TransactionID:
                   $ref: "#/components/schemas/xTransactionID"
+                UserID:
+                  $ref: "#/components/schemas/xIAN"
 
     GetUserWalletTransactionDetailsResponse:
       type: object
@@ -6885,6 +7122,55 @@ components:
             - .issued
             - .expires
 
+    CompanyAdvancedProfileDetailsRequest:
+      type: object
+      required:
+        - AdvancedProfileDetails
+      properties:
+        AdvancedProfileDetail:
+          type: object
+          required:
+            - request
+          properties:
+            request:
+              type: object
+              required:
+                - IssuerAccountNumber
+                - BeneficiaryAccountNumber
+              properties:
+                IssuerAccountNumber:
+                  $ref: "#/components/schemas/xIAN"
+                BeneficiaryAccountNumber:
+                  $ref: "#/components/schemas/xIAN"
+
+
+
+    CompanyAdvancedProfileDetailsResponse:
+      type: object
+      properties:
+        AdvancedProfileDetailsResponse:
+          type: object
+          properties:
+            AdvancedProfileDetailsResult:
+              type: object
+              properties:
+                BeneficiaryAccountNumber:
+                  $ref: "#/components/schemas/xIAN"
+                Country_Of_Registration_Code2:
+                  $ref: "#/components/schemas/xCountryISO2"
+                Status:
+                  type: string
+                  example: "Approved"
+                BusinessEntityInformation:
+                  $ref: "#/components/schemas/xBusinessEntityInformation"
+                AuthorizedContactInformation:
+                  $ref: "#/components/schemas/xAuthorizedContactInformation"
+                DirectorInformation:
+                  $ref: "#/components/schemas/xDirectorInformation"
+                OwnerInformation:
+                  $ref: "#/components/schemas/xOwnerInformation"
+
+
     GetConnectedStatusRequest:
       type: object
       required:
@@ -6924,6 +7210,113 @@ components:
                   example: "Not Connected"
                 OperationStatus:
                   $ref: "#/components/schemas/xOpStatus"
+
+    CompanyAdvancedProfileRequest:
+      type: object
+      required:
+        - AdvancedProfile
+      properties:
+        AdvancedProfile:
+          type: object
+          required:
+            - request
+          properties:
+            request:
+              type: object
+              required:
+                - IssuerAccountNumber
+                - FromAccountNumber
+                - Country_Of_Registration_Code2
+                - BusinessEntityInformation
+                - AuthorizedContactInformation
+                - DirectorInformation
+              properties:
+                IssuerAccountNumber:
+                  $ref: "#/components/schemas/xIAN"
+                BeneficiaryAccountNumber:
+                  $ref: "#/components/schemas/xIAN"
+                Country_Of_Registration_Code2:
+                  $ref: "#/components/schemas/xCountryISO2"
+                BusinessEntityInformation:
+                  $ref: "#/components/schemas/xBusinessEntityInformation"
+                AuthorizedContactInformation:
+                  $ref: "#/components/schemas/xAuthorizedContactInformation"
+                DirectorInformation:
+                  $ref: "#/components/schemas/xDirectorInformation"
+                OwnerInformation:
+                  $ref: "#/components/schemas/xOwnerInformation"
+
+    CompanyAdvancedProfileResponse:
+      type: object
+      properties:
+        AdvancedProfileResponse:
+          type: object
+          properties:
+            AdvancedProfileResponse:
+              type: object
+              properties:
+                BeneficiaryID:
+                  $ref: "#/components/schemas/xIAN"
+                message:
+                  type: string
+                  example: "Advanced Profile Submitted Successfully"
+                OperationStatus:
+                  $ref: "#/components/schemas/xOpStatus"
+
+    xOwnerInformation:
+      description: >
+        Information about the company’s owner(s).
+          The first parameter in this is the field
+        <code>Is_the_Company_Pubicly_Traded<i>[sic]</i></code>, with a value of
+        either <code>yes</code> or <code>no</code>.
+        Following that parameter, each owner,
+        from 1 to 1000, has a specific set of data parameters
+        as follows:
+        <br/><table><tbody><tr><td>
+        "Owner_1_Percentage_Owned":"Owner 1 Percentage Owned"<br/>
+        "Owner_1_First_Name":"Owner 1 First Name"<br/>
+        "Owner_1_Last_Name":"Owner 1 Last Name"<br/>
+        "Owner_1_Occupation":"Owner 1 Occupation"<br/>
+        "Owner_1_Source_of_Income":"Owner 1 Source of Income"<br/>
+        "Owner_1_Date_of_Birth":"Owner 1 Date of Birth"<br/>
+        "Owner_1_Nationality":"Owner 1 Nationality"<br/>
+        "Owner_1_Identity_Document_Type":"Owner 1 Identity Document Type"<br/>
+        "Owner_1_Identity_Document_Number":"Owner 1 Identity Document Number"<br/>
+        "Owner_1_Identity_Document_Expiration":"Owner 1 Identity Document Expiration"<br/>
+        "Owner_1_Jurisdiction":"Owner 1 Jurisdiction"<br/>
+        "Owner_1_Address_1":"Owner 1 Address 1"<br/>
+        "Owner_1_City":"Owner 1 City"<br/>
+        "Owner_1_Country_Code2":"Use <code>GetAdvancedContactCountry</code> to get Country"<br/>
+        "Owner_1_Region_Code2":"Use <code>GetAdvancedContactState</code> to get Region"
+        "Owner_1_Postal_Code":"Owner 1 Postal Code"<br/>
+        </td></tr></table>
+        Rather than specify the entirety of all 1000 entries,
+        this field is left as a string for the developer to parse.
+      type: string
+
+    xDirectorInformation:
+      description: >
+        Information about the company’s directors. Each director, 1-1000, has a specific
+        set of data parameters as follows: <br/>
+        <table><tbody><tr><td>
+        "Director_1_Job_Title":"Director 1  Job Title"<br/>
+        "Director_1_First_Name":"Director 1  First Name"<br/>
+        "Director_1_Last_Name":"Director 1  Last Name"<br/>
+        "Director_1_Date_of_Birth":"Director 1  Date of Birth"<br/>
+        "Director_1_Nationality":"Use <code>GetAdvancedContactCountry</code> to get Country"<br/>
+        "Director_1_Identification_Type":"Director 1  Identity Document Type"<br/>
+        "Director_1_Identity_Document_Number":"Director 1  Identity Document Number"<br/>
+        "Director_1_Identity_Document_Expiration":"Director 1  Identity Document Expiration"<br/>
+        "Director_1_Jurisdiction":"Director 1  Jurisdiction"<br/>
+        "Director_1_Address_1":"Director 1  Address 1"<br/>
+        "Director_1_City":"Director 1  City"<br/>
+        "Director_1_Country_Code2":"Use <code>GetAdvancedContactCountry</code> to get Country"<br/>
+        "Director_1_Region_Code2":"Use <code>GetAdvancedContactState</code> to get Region"<br/>
+        "Director_1_Postal_Code":"Director 1  Postal Code"
+        </td></tr></table>
+        Rather than specify the entirety of all 1000 entries,
+        this field is left as a string for the developer to parse.
+      type: string
 
     GetUserPaymentMethodsResponse:
       type: object
