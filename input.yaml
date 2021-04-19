@@ -2644,7 +2644,7 @@ components:
         Region_Code2:
           $ref: "#/components/schemas/xRegion_Code2"
         Country_Code2:
-          $ref: "#/components/schemas/xCountryIS02"
+          $ref: "#/components/schemas/xCountryISO2"
         Postal_Code:
           $ref: "#/components/schemas/x255CharString"
         Business_Phone:
