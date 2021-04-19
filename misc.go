@@ -56,7 +56,7 @@ func MarkdownToHtml(markdown string) (html string) {
 	const OneStar = "*"
 	const ThreeUnder = "___"
 	const TwoUnder = "__"
-	const OneUnder = "_"
+	// const OneUnder = "_"
 	const Sneech = "`" // https://bit.ly/3qSumos
 
 	if "" == markdown {
@@ -68,7 +68,7 @@ func MarkdownToHtml(markdown string) (html string) {
 	html = MarkdownSeparatorToHtmlTags(html, OneStar, "i")
 	html = MarkdownSeparatorToHtmlTags(html, ThreeUnder, "i", "b")
 	html = MarkdownSeparatorToHtmlTags(html, TwoUnder, "b")
-	html = MarkdownSeparatorToHtmlTags(html, OneUnder, "i")
+	// html = MarkdownSeparatorToHtmlTags(html, OneUnder, "i")
 	return MarkdownSeparatorToHtmlTags(html, Sneech, "code")
 }
 
