@@ -183,7 +183,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "/components/schemas/xErrorDefault"
+                $ref: "#/components/schemas/xErrorDefault"
 
 
 
@@ -228,14 +228,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "/components/schemas/CompanyAdvancedProfileResponse"
+                $ref: "#/components/schemas/CompanyAdvancedProfileResponse"
         default:
           description: >
             Error Response
           content:
             application/json:
               schema:
-                $ref: "/components/schemas/xErrorDefault"
+                $ref: "#/components/schemas/xErrorDefault"
 
 
 
