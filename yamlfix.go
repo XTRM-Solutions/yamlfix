@@ -31,7 +31,15 @@ func main() {
 	}
 
 	if !FlagNoTables {
-		EnhanceDescriptions(xApi)
+		format := GetFlagString("format")
+		switch format {
+		case "SIMPLEX":
+			SimplexEnhanceDescriptions(xApi)
+			break
+		default:
+			xLog.Printf("Huh? Somehow an unrecognized format [ %s ] was requested?", format)
+		}
+
 	}
 
 	if FlagDereference {

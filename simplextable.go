@@ -9,8 +9,8 @@ import (
 
 var TableDebug bool = false
 
-// EnhanceDescriptions /* func EnhanceDescriptions (api *oas.Swagger)
-func EnhanceDescriptions(api *oas.Swagger) {
+// SimplexEnhanceDescriptions /* func SimplexEnhanceDescriptions (api *oas.Swagger)
+func SimplexEnhanceDescriptions(api *oas.Swagger) {
 
 	// this strips the required column from the response table
 	// without requiring 2 different getSchemaProperties
@@ -132,11 +132,11 @@ func MakeTableRow(paramName string, description string, required []string) (tabl
 		TagDecorate(description, "td"),
 		TagDecorate(requiredText, "td"))
 
-	// table row
-	tableRow = TagDecorate(sb.String(), "tr")
+	// tableRow :=
+	return TagDecorate(sb.String(), "tr")
 
-	if TableDebug {
-		xLog.Printf("table row: [%s]", tableRow)
-	}
-	return tableRow
+	// if TableDebug {
+	//	xLog.Printf("table row: [%s]", tableRow)
+	// }
+	// return tableRow
 }
