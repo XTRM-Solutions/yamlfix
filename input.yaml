@@ -186,13 +186,11 @@ paths:
                 $ref: "#/components/schemas/xErrorDefault"
 
 
-
-
   /Register/CompanyAdvancedProfile:
     post:
       deprecated: true
       operationId: CompanyAdvancedProfile
-      summary: Create a beneficiary account
+      summary: Set advanced profile
       description: >
         ***Deprecated.***
         This API calls allows you to fill and
@@ -214,7 +212,7 @@ paths:
 
       requestBody:
         description: >
-          Profile information request
+          Advanced profile information request
         required: true
         content:
           application/json:
@@ -236,8 +234,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/xErrorDefault"
-
-
 
   /Register/CreateUser:
     post:
@@ -285,7 +281,7 @@ paths:
                         Year: '1933'
                       Address:
                         AddressLine1: The CommericalCo Home Office
-                        AddressLine2: 1 Calle Xerimba
+                        AddressLine2: "1 Calle Xerimba"
                         AptSuitNum: "Suite #314"
                         City: Coimbra
                         Country: Portugal
@@ -2856,10 +2852,10 @@ components:
 
     xCountry:
       description: >
-        Name of the country, from 1 to 25 characters
+        Name of the country, from 1 to 255 characters
       type: string
       minLength: 01
-      maxLength: 25
+      maxLength: 245
       example: Vanuatu
 
     xCountryISO2:
@@ -4059,9 +4055,9 @@ components:
           $ref: "#/components/schemas/xIAN"
         Email:
           $ref: "#/components/schemas/xEmail"
-        MasteradminFirstName:
+        MasterAdminFirstName:
           $ref: "#/components/schemas/xName"
-        MasteradminLastName:
+        MasterAdminLastName:
           $ref: "#/components/schemas/xName"
 
     xBeneficiaryAdminDetails:
