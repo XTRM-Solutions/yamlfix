@@ -4279,14 +4279,14 @@ components:
                 LegalLastName:
                   $ref: "#/components/schemas/xName"
 
-                EmailAddress:
-                  $ref: "#/components/schemas/xEmail"
+                # EmailAddress:
+                #  $ref: "#/components/schemas/xEmail"
 
                 # EmailNotification:
                 #  type: boolean
 
-                MobilePhone:
-                  $ref: "#/components/schemas/xPhone"
+                # MobilePhone:
+                #  $ref: "#/components/schemas/xPhone"
 
                 TaxId:
                   $ref: "#/components/schemas/xTaxId"

@@ -7,20 +7,20 @@ import (
 	oas "github.com/getkin/kin-openapi/openapi3"
 )
 
-var TableDebug bool = false
-
-// SimplexEnhanceDescriptions /* func SimplexEnhanceDescriptions (api *oas.Swagger)
+// SimplexEnhanceDescriptions
+// Find the lower-level parameters, and build a
+// table of descriptions
 func SimplexEnhanceDescriptions(api *oas.Swagger) {
 
 	// this strips the required column from the response table
 	// without requiring 2 different getSchemaProperties
-	// implementations
+	// implementations.
 	colReplace := strings.NewReplacer(
 		TagDecorate(TextFalse, "td")+"</tr>", "</tr>",
 		TagDecorate(TextTrue, "td")+"</tr>", "</tr>")
 
 	var requestTableRows, responseTableRows string
-	if !FlagDebug {
+	if FlagDebug {
 		xLog.Printf("api is type %T", api)
 	}
 
@@ -132,11 +132,6 @@ func MakeTableRow(paramName string, description string, required []string) (tabl
 		TagDecorate(description, "td"),
 		TagDecorate(requiredText, "td"))
 
-	// tableRow :=
 	return TagDecorate(sb.String(), "tr")
 
-	// if TableDebug {
-	//	xLog.Printf("table row: [%s]", tableRow)
-	// }
-	// return tableRow
 }
