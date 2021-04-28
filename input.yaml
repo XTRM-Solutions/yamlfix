@@ -51,6 +51,9 @@ tags:
   - name: Wallets
     description: API calls dealing with wallets
 
+  - name: Deprecated
+    description: API calls that are specifically deprecated
+
   ######################## OLD TAGS ##########################
   #- name: AUTHORIZATION
   # description: Authorization token API
@@ -152,7 +155,7 @@ paths:
     post:
       deprecated: true
       operationId: CompanyAdvancedProfileDetails
-      summary: Fetch the advanced profile details for this or a connected company
+      summary: Get the advanced profile details for this or a connected company
       description: >
         ***Deprecated.***
         This API fetches the advanced profile details for a company for
@@ -161,6 +164,7 @@ paths:
         in the next release as a breaking change.**
       tags:
         - Beneficiary Company
+        - Deprecated
 
       requestBody:
         content:
@@ -209,6 +213,7 @@ paths:
         in the next release as a breaking change.**
       tags:
         - Beneficiary Company
+        - Deprecated
 
       requestBody:
         description: >
