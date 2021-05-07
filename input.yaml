@@ -461,10 +461,13 @@ paths:
 
   /Payment/GetUserPaymentMethods:
     post:
+      deprecated: true
       operationId: GetUserPaymentMethods
       summary: Get user payment
       description: >
         # Remitter Payment Methods
+
+        **This has been replaced by GetPaymentMethods.**
 
         Choose the payment method.
         You can pay to the XTRM &lsquo;AnyPay™’
@@ -475,6 +478,9 @@ paths:
         directly to a number of end points such as
         bank account, gift cards, or a prepaid debit
         card.
+
+        This call has an empty JSON body: `{ }`
+
 
       tags:
         - Payment Methods

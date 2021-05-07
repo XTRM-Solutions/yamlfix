@@ -1,7 +1,7 @@
 # YAMLFIX
 
-**YAMLFIX supports the OpenAPI Specification Version 3.0.*
-x***
+**YAMLFIX supports the OpenAPI Specification Version *
+3.0.x***
 
 Postman is a fantastic tool for implementing and testing API
 integrations allowing various platforms to take advantage of
@@ -89,6 +89,10 @@ Without the OpenAPI project, this program would be far more
 complex.
 
 * github.com/getkin/kin-openapi
+
+This extended flag management library makes handling complex
+and extended flags much, much simpler.
+
 * github.com/spf13/pflag
 
 ## License
