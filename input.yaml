@@ -1270,6 +1270,12 @@ paths:
         Prepaid Virtual Visa. When you make transfers, if
         the beneficiary does not have a wallet in that currency,
         one will be created automatically.
+
+        The `Transaction Detail` element provides information
+        on when the transaction generates additional information
+        (typically redemption details for gift cards or debit
+        cards) that need to be displayed to the user in a web
+        or mobile application.
       requestBody:
         required: true
         content:

@@ -1,0 +1,241 @@
+openapi: 3.0.3
+
+info:
+  title: XTRM Payments API
+  version: 4.8.0
+  description: >
+    The XTRM Payments API
+  termsOfService: "https://www.xtrm.com/web/Participant/Profile/TermsPopup.aspx"
+  contact:
+    email: apisupport@xtrm.com
+    name: XTRM API Help desk
+  license:
+    name: OFL
+
+#########################
+# RegEx to find descriptions on the same line
+# and move them to a > format
+#      // ^([\s]*)description:[\s]+([^\|^>].+)$
+#      // \1description: > \n\1  \2
+# note: will ALSO match description fields, as opposed to
+#       OAS description parameters :-(
+#########################
+
+tags:
+  # new tags
+
+  - name: Authorization
+    description: API Authorization API calls.
+
+  - name: Banks
+    description: API calls dealing with bank connections and information
+
+  - name: Beneficiary Company
+    description: API calls dealing with corporate beneficiaries
+
+  - name: Beneficiary User
+    description: API calls dealing with personal beneficiaries
+
+  - name: OTP
+    description: API calls to manage one time passwords
+
+  - name: Payment Methods
+    description: API calls dealing with payment methods
+
+  - name: Programs
+    description: API calls to manage remittance programs
+
+  - name: Transfer Funds
+    description: API calls dealing with moving funds
+
+  - name: Wallets
+    description: API calls dealing with wallets
+
+  - name: Deprecated
+    description: API calls that are specifically deprecated
+
+  ######################## OLD TAGS ##########################
+  #- name: AUTHORIZATION
+  # description: Authorization token API
+  #- name: XTRM AnySource
+  #  description: API Operations for XTRM AnySource
+  #- name: REMITTER API REFERENCE
+  #  description: API Operations for XTRM Remitters
+  #- name: BENEFICIARY API REFERENCE
+  #  description: API Operations for XTRM Beneficiaries
+  #- name: LINK BANK
+  #  description: API Operations for connecting remitters and beneficiaries with banks
+  #- name: COMPANY ADVANCED SERVICES
+  #  description: Advanced API services
+
+#########################
+
+security:
+  - bearerAuth: [ ]
+
+  # all requests require bearer-authorization
+  #########################
+
+servers:
+  - url: "https://xapisandbox.xtrm.com/API/V4"
+  #- url: '{protocol}://{environment}.xtrm.com/API/v4'
+  #  variables:
+  #    protocol:
+  #      default: https
+  #      enum:
+  #        - https
+  #      description: ''
+  #    environment:
+  #      default: xapisandbox
+  #      enum:
+  #        - xapisandbox
+  #        - production
+  #        - staging
+  #        - devTrunk
+  #        - devFork
+  #      description: sandbox
+  #  description: sandbox authorization server payment
+  #########################
+
+paths:
+
+  /proposal/GetApiProxyToken:
+    post:
+      operationId: GetApiProxyToken
+      summary: Get a proxy token for a remote app to access the XTRM API
+      tags:
+        - Authorization
+      description: >
+        Creates a use and time-limited token to permit a client
+        to perform one single XTRM api access
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GetApiProxyTokenRequest"
+
+      responses:
+        default:
+          description: >
+            Error Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/xErrorDefault"
+        "200":
+          description: >
+            Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetApiProxyTokenResponse"
+
+
+
+components:
+  schemas:
+    GetApiProxyTokenRequest:
+      type: object
+      required:
+        - GetApiProxyToken
+      properties:
+        GetApiProxyToken:
+          type: object
+          required: Request
+          properties:
+            Request:
+              type: object
+              required:
+                - IssuerAccountNumber
+                - BeneficaryID
+                - ApiCallToProxy
+                - ExternalClientIPAddress
+              properties:
+                IssuerAccountNumber:
+                  $ref: "#/components/schemas/xIAN"
+                BeneficaryID:
+                  $ref: "#/components/schemas/xIAN"
+                ApiCallToProxy:
+                  type: string
+                  minLength: 1
+                  maxLength: 100
+                ExternalClientIPAddress:
+                  type: object
+                  required:
+                    - IPV4
+                    - IPV6
+                  properties:
+                    IPV4:
+                      type: string
+                      pattern: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
+                      minLength: 7
+                      maxLength: 15
+                      example: "25.125.8.33"
+                    IPV6:
+                      type: string
+                      pattern: (([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))
+                      minLength: 7
+                      maxLength: 200;
+                      example: "FE80:0000:0000:0000:0202:B3FF:FE1E:8329"
+
+    GetApiProxyTokenResponse:
+      type: object
+      properties:
+        GetApiProxyTokenResponse:
+          type: object
+          properties:
+            GetApiProxyTokenResult:
+              type: object
+              properties:
+                ProxyToken:
+                  type: string
+                SubmissionEndpoint:
+                  type: string
+                OperationStatus:
+                  $ref: "#/components/schemas/xOpStatus"
+
+    # /**********************************/
+    xErrorDefault:
+      type: object
+      properties:
+        Error:
+          description: >
+            The nature, type, and sort of error
+          type: object
+      example:
+        Error:
+          Error: "Error Message"
+          Error_Description: "Error Description"
+
+
+    xOpStatus:
+      description: >
+        Errors are returned variously by different calls.
+        Possibilities include a string, an array of string
+        tuples, or the null value.
+      type: object
+      properties:
+        Success:
+          description: >
+            Success or failure of operation (true / false)
+          type: boolean
+          example: true
+        Errors:
+          nullable: true
+          type: object
+          example: null
+
+    xIAN:
+      description: >
+        the `AccountID`, `IssuerAccountNumber`, `UserID`
+        (and possibly some others) is a unique XTRM
+        account identifier, starting with `SPN` for
+        companies (usually remitters), or `PAT`
+        for individual beneficiaries.
+      type: string
+      minLength: 01
+      maxLength: 20
+      pattern: (SPN[1-9][0-9]*|PAT[1-9][0-9]*)
+      example: SPN1234567
