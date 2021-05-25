@@ -48,7 +48,7 @@ func WriteSB(sb *strings.Builder, input ...string) {
 	}
 }
 
-// MarkdownToHtml convert some simple markdown formatting
+// MarkdownToHtml converts simple markdown formatting
 // into HTML-tagged formatted text, naively.
 func MarkdownToHtml(markdown string) (html string) {
 	const ThreeStars = "***"
