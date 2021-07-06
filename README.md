@@ -28,7 +28,9 @@ themselves composed of other data) and turns that into two
 tables, one for request and one for the response, listing
 out the parameters and their definitions. Secondly, it fully
 expands the references for each call, allowing Postman to
-generate complete example schemas.
+generate complete example schemas rather than the unfortunate
+admission of "schema too complicated to display example" 
+message.
 
 This program was developed and tested under Windows.
 
