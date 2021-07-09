@@ -39,9 +39,8 @@ func InitLog() {
 	logWriters = append(logWriters, os.Stderr)
 	logWriters = append(logWriters, xLogBuffer)
 
-	out := io.MultiWriter(logWriters...)
 	xLog.SetFlags(log.Ldate | log.Ltime | log.LUTC | log.Lshortfile)
-	xLog.SetOutput(out)
+	xLog.SetOutput(io.MultiWriter(logWriters...))
 }
 
 func InitFlags() {
