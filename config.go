@@ -87,7 +87,7 @@ func InitFlags() {
 
 	// FlagPretty = GetFlagBool("prettyprint")
 
-	if GetFlagBool("help") {
+	if len(os.Args) <= 1 || GetFlagBool("help") {
 		_, thisCmd := filepath.Split(os.Args[0])
 		_, _ = fmt.Fprint(os.Stdout, "\n", "usage for ", thisCmd, ":\n", nFlags.FlagUsages(), "\n")
 		UsageMessage()
