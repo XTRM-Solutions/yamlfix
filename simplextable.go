@@ -40,7 +40,7 @@ func SimplexEnhanceDescriptions(api *oas.Swagger) {
 			}
 		}
 
-		if !FlagDebug {
+		if FlagDebug {
 			xLog.Printf("api is type %T, %T", requestTableRows, responseTableRows)
 		}
 
