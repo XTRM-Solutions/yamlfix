@@ -46,7 +46,7 @@ func InitLog() {
 func InitFlags() {
 
 	nFlags = pflag.NewFlagSet("default", pflag.ContinueOnError)
-	nFlags.BoolP("expand-only", "", false, "Do not create JSON parameter tables (implies -x)")
+	nFlags.BoolP("expand-only", "", false, "Do not create JSON parameter tables (implies -x false)")
 	nFlags.StringP("infile", "i", "input.old_yaml", "name of YAML file to process")
 	nFlags.StringP("outfile", "o", "output.json", "name of processed (output) JSON file")
 	nFlags.IntP("indent", "n", 2, "Spaces to use for each indent level")
