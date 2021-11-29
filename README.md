@@ -49,7 +49,8 @@ This program was developed and tested under Windows.
 - Execute `go install` This will compile the program, and
   place the executable into the `%GOROOT%/bin` directory.
   Installing Go itself should set both `GOPATH` and `GOROOT`
-  environment variables.
+  environment variables, as well as adding `%GOROOT%/bin`
+  to the path.
 
 ## Usage
 
@@ -82,6 +83,7 @@ and option defaults, please run `yamlfix --help`
 | Date | Whom | Company | Comments |
 |---|---|---|---|
 | 13 April 2021  | Nathan Verrilli  | XTRM | Initial Commit
+| 29 Nov   2020  | Nathan Verrill | XTRM | various updates
 
 ## Credits
 
@@ -96,6 +98,13 @@ This extended flag management library makes handling complex
 and extended flags much, much simpler.
 
 * github.com/spf13/pflag
+
+And finally
+
+* All projects referenced from those projects. We stand
+  on the shoulders of giants. **Under no circumstances
+  trip either Mr. Charles Babbage or Lady Ada Lovelace. 
+  It is a long way down.**
 
 ## License
 
