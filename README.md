@@ -83,7 +83,7 @@ and option defaults, please run `yamlfix --help`
 | Date | Whom | Company | Comments |
 |---|---|---|---|
 | 13 April 2021  | Nathan Verrilli  | XTRM | Initial Commit
-| 29 Nov   2020  | Nathan Verrill | XTRM | various updates
+| 29 Nov   2020  | Nathan Verrilli | XTRM | various updates
 
 ## Credits
 
@@ -104,7 +104,7 @@ And finally
 * All projects referenced from those projects. We stand
   on the shoulders of giants. **Under no circumstances
   trip either Mr. Charles Babbage or Lady Ada Lovelace. 
-  It is a long way down.**
+  It's a long way down.**
 
 ## License
 
