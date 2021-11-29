@@ -83,7 +83,7 @@ and option defaults, please run `yamlfix --help`
 | Date | Whom | Company | Comments |
 |---|---|---|---|
 | 13 April 2021  | Nathan Verrilli  | XTRM | Initial Commit
-| 29 Nov   2020  | Nathan Verrilli | XTRM | various updates
+| 29 Nov   2021  | Nathan Verrilli | XTRM | various updates
 
 ## Credits
 
