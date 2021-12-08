@@ -20,7 +20,7 @@ import (
 // Remove the reference pointer from the loaded OAS data
 // thus, when the OAS data is unmarshalled back into JSON
 // there are no internal references.
-func StripReferences(api *oas.Swagger) {
+func StripReferences(api *oas.T) {
 	if nil == api {
 		return
 	}

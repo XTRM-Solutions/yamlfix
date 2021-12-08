@@ -10,7 +10,7 @@ import (
 // SimplexEnhanceDescriptions
 // Find the lower-level parameters, and build a
 // table of descriptions
-func SimplexEnhanceDescriptions(api *oas.Swagger) {
+func SimplexEnhanceDescriptions(api *oas.T) {
 
 	// this strips the required column from the response table
 	// without requiring 2 different getSchemaProperties

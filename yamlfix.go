@@ -17,7 +17,8 @@ func main() {
 	defer DeferError(xLogBuffer.Flush)
 	InitFlags()
 
-	xApi, err := oas.NewSwaggerLoader().LoadSwaggerFromFile(GetFlagString("infile"))
+	//xApi, err := oas.NewSwaggerLoader().LoadSwaggerFromFile(GetFlagString("infile"))
+	xApi, err := oas.NewLoader().LoadFromFile(GetFlagString("infile"))
 	if nil == xApi || nil != err {
 		if nil != err {
 			xLog.Printf("failed to load %s because %s",
@@ -47,7 +48,7 @@ func main() {
 			xLog.Print("Writing output file dereferenced, and unmodified file as debug_post_reference_")
 			writeJsonOASFile(xApi, "debug_post_reference_"+GetFlagString("outfile"))
 		} else {
-			xLog.Print("Writing output file dereferenced")
+			xLog.Print("Writing output file with internal referenced expanded")
 		}
 		StripReferences(xApi)
 		writeJsonOASFile(xApi, GetFlagString("outfile"))
@@ -64,7 +65,7 @@ func main() {
 
 }
 
-func writeJsonOASFile(api *oas.Swagger, fileName string) {
+func writeJsonOASFile(api *oas.T, fileName string) {
 	output, err := api.MarshalJSON()
 	if nil != err {
 		xLog.Fatalf("Attempting to reconstruct API spec failed because: %s", err.Error())
