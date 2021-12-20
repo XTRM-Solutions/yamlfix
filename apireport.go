@@ -2,16 +2,11 @@ package main
 
 import (
 	"bufio"
-	"github.com/NanXiao/stack"
 	oas "github.com/getkin/kin-openapi/openapi3"
 	"os"
-	"strings"
-	// https://pkg.go.dev/github.com/getkin/kin-openapi@v0.85.0/openapi3
 )
 
 var outWriter *bufio.Writer
-var paramStack stack.Stack
-var ps = &paramStack
 
 func ApiReport(api *oas.T) {
 	const apiFileName = "apireport.csv"
@@ -21,11 +16,11 @@ func ApiReport(api *oas.T) {
 	}
 
 	outFile, err := os.Create(apiFileName)
-	outWriter = bufio.NewWriter(outFile)
 	if nil != err {
-		xLog.Fatalf("Attempt to open file %s failed because",
+		xLog.Fatalf("Attempt to open file %s failed because %s",
 			apiFileName, err.Error())
 	}
+	outWriter = bufio.NewWriter(outFile)
 	DeferError(outWriter.Flush)
 	DeferError(outFile.Close)
 
@@ -47,36 +42,54 @@ func apiCallReport(item *oas.PathItem) {
 }
 
 func operationParamReport(item *oas.Operation) {
+	var yl YamlReportLine
+
 	if nil == item {
 		return
 	}
 
-	if IsStringSet(&item.OperationID) {
-		ps.Push(item.OperationID)
-	} else {
-		ps.Push("Unspecified OperationID")
+	yl.opID = item.OperationID
+	if FlagDebug {
+		xLog.Printf("operation id: %s\n", item.OperationID)
 	}
-	xLog.Printf("operation id: %s\n", item.OperationID)
+	doContent(&yl, item.RequestBody.Value.Content)
 
-	var r strings.Builder
-	WriteSB(&r, "REQUEST: %s\t", item.OperationID)
-	doContent(&r, item.RequestBody.Value.Content)
-
-	_ = ps.Pop()
 }
 
-func doContent(r *strings.Builder, content oas.Content) {
+func doContent(yl *YamlReportLine, content oas.Content) {
 	if nil == content {
 		return
 	}
 	for _, c := range content {
-		doSchema(r, c.Schema.Value)
+		doSchema(yl, c.Schema.Value)
 	}
 }
 
-func doSchema(r *strings.Builder, schema *oas.Schema) {
-	if nil == schema || nil == r {
+func doSchemaRefs(yl *YamlReportLine, sr *oas.SchemaRefs) {
+	if nil == yl || nil == sr {
 		return
 	}
+	for _, schemaRef := range *sr {
+		doSchema(yl, schemaRef.Value)
+	}
 
+}
+
+func doSchema(yl *YamlReportLine, schema *oas.Schema) {
+	if nil == schema || nil == yl {
+		return
+	}
+	yl.PushType(*&schema.Type)
+	doSchemaRefs(yl, &schema.OneOf)
+	doSchemaRefs(yl, &schema.AnyOf)
+	doSchemaRefs(yl, &schema.AllOf)
+	if nil != schema.Not {
+		doSchema(yl, schema.Not.Value)
+	}
+	if nil != schema.Properties {
+		for _, s := range schema.Properties {
+			doSchema(yl, s.Value)
+		}
+	}
+	_ = yl.PopType()
 }

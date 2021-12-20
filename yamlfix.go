@@ -43,7 +43,7 @@ func main() {
 	}
 
 	if FlagApiReport {
-		ApiReport(xApi)
+		// ApiReport(xApi)
 	}
 
 	if FlagDereference {
