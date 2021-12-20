@@ -25,6 +25,7 @@ var FlagDebug bool
 var FlagVerbose bool
 var FlagQuiet bool
 var FlagNoTables bool
+var FlagApiReport bool
 var nFlags *pflag.FlagSet
 
 func InitLog() {
@@ -58,6 +59,7 @@ func InitFlags() {
 	nFlags.BoolP("verbose", "v", false, "Supply informative messages")
 	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently 'SIMPLEX' only) ")
 	nFlags.BoolP("expand-references", "x", true, "Expand internal and external references in POST methods")
+	nFlags.BoolP("api-report", "a", true, "Provide a CSV report on API names and parameters")
 	// nFlags.BoolP("prettyprint", "p", true, "Pretty-print JSON output")
 
 	err := nFlags.Parse(os.Args[1:])
@@ -138,6 +140,8 @@ func InitFlags() {
 		FlagNoTables = false
 		FlagDereference = GetFlagBool("expand-references")
 	}
+
+	FlagApiReport = GetFlagBool("api-report")
 }
 
 // UsageMessage /* UsageMessage

@@ -1,6 +1,5 @@
 google-java-format.xml
 vcs.xml
-google-java-format.xml
 yamlfix.log
 /debug_post_reference_output.json
 /debug_pre_output.json
@@ -8,3 +7,4 @@ yamlfix.log
 /PROP01_ApiProxyMechanism.pdf
 /input.old_yaml
 /input.old3_yaml
+input.yaml

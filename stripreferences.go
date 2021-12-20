@@ -6,14 +6,14 @@ This all works very simply because the openapi3 toolkit tracks
 structure. A NIL ref means that this is NOT a reference; a
 non-NIL reference means, create this as the specified reference.
 Therefore, to 'strip' references, rather than copy & pasting
-trees and maps and submaps into maps and trees and yet more
-submaps, one need only clear the Ref string.
-SO MUCH EASY! THANK YOU OPENAPI LIBRARY!
-*/
+trees and maps and sub-maps into maps and trees and yet more
+sub-maps, one need only clear the Ref string.
+              SO MUCH EASY! THANK YOU OPENAPI LIBRARY!
+***************************/
 
 import (
 	oas "github.com/getkin/kin-openapi/openapi3"
-	// https://pkg.go.dev/github.com/getkin/kin-openapi@v0.53.0/openapi3
+	// https://pkg.go.dev/github.com/getkin/kin-openapi@v0.85.0/openapi3
 )
 
 // StripReferences

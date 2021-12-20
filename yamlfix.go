@@ -17,7 +17,6 @@ func main() {
 	defer DeferError(xLogBuffer.Flush)
 	InitFlags()
 
-	//xApi, err := oas.NewSwaggerLoader().LoadSwaggerFromFile(GetFlagString("infile"))
 	xApi, err := oas.NewLoader().LoadFromFile(GetFlagString("infile"))
 	if nil == xApi || nil != err {
 		if nil != err {
@@ -41,6 +40,10 @@ func main() {
 			xLog.Printf("Huh? Somehow an unrecognized format [ %s ] was requested?", format)
 		}
 
+	}
+
+	if FlagApiReport {
+		ApiReport(xApi)
 	}
 
 	if FlagDereference {
