@@ -52,16 +52,19 @@ func operationParamReport(item *oas.Operation) {
 	if FlagDebug {
 		xLog.Printf("operation id: %s\n", item.OperationID)
 	}
-	doContent(&yl, item.RequestBody.Value.Content)
+	//doContent(&yl, item.RequestBody.Value.Content)
 
 }
 
-func doContent(yl *YamlReportLine, content oas.Content) {
-	if nil == content {
+func doSchemas(yl *YamlReportLine, schemas *oas.Schemas) {
+	if nil == schemas {
 		return
 	}
-	for _, c := range content {
-		doSchema(yl, c.Schema.Value)
+	for key := range *schemas {
+		ref, ok := (*schemas)[key]
+		if ok && nil != ref && nil != ref.Value {
+			doSchema(yl, ref.Value)
+		}
 	}
 }
 
@@ -72,14 +75,22 @@ func doSchemaRefs(yl *YamlReportLine, sr *oas.SchemaRefs) {
 	for _, schemaRef := range *sr {
 		doSchema(yl, schemaRef.Value)
 	}
-
 }
 
 func doSchema(yl *YamlReportLine, schema *oas.Schema) {
 	if nil == schema || nil == yl {
 		return
 	}
-	yl.PushType(*&schema.Type)
+
+	yl.PushType(schema.Type)
+	_, err := outWriter.WriteString(yl.String())
+	if err != nil {
+		return
+	}
+	if FlagDebug {
+		xLog.Println(yl.String())
+	}
+
 	doSchemaRefs(yl, &schema.OneOf)
 	doSchemaRefs(yl, &schema.AnyOf)
 	doSchemaRefs(yl, &schema.AllOf)
@@ -87,9 +98,10 @@ func doSchema(yl *YamlReportLine, schema *oas.Schema) {
 		doSchema(yl, schema.Not.Value)
 	}
 	if nil != schema.Properties {
-		for _, s := range schema.Properties {
-			doSchema(yl, s.Value)
-		}
+		doSchemas(yl, &schema.Properties)
+	}
+	if nil != schema.Items {
+		doSchema(yl, schema.Items.Value)
 	}
 	_ = yl.PopType()
 }
