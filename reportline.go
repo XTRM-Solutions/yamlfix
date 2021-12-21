@@ -1,51 +1,65 @@
 package main
 
-import (
-	"github.com/NanXiao/stack"
-	"strings"
-)
+import "strings"
 
-type YamlReportLine struct {
-	opID       string
-	paramCount int
-	paramName  []string
-	paramType  stack.Stack
+const SEPARATORCHAR = "\t"
+
+type StringStack struct {
+	count   int
+	strings []string
 }
 
-func (yl *YamlReportLine) PushType(s string) {
-	yl.paramType.Push(s)
-}
-func (yl *YamlReportLine) PopType() (s string) {
-	return yl.paramType.Pop().(string)
-}
-func (yl *YamlReportLine) PeekType() (s string) {
-	return yl.paramType.Top().(string)
+func (ns *StringStack) GetCount() (count int) {
+	return ns.count
 }
 
-func (yl *YamlReportLine) PushParam(s string) {
-	yl.paramName[yl.paramCount] = s
-	yl.paramCount += 1
+func (ns *StringStack) Reset() {
+	ns.count = 0
+	ns.strings = nil
 }
 
-func (yl *YamlReportLine) PopParam() {
-	if 0 >= yl.paramCount {
+func (ns *StringStack) Push(s string) {
+	ns.strings[ns.count] = s
+	ns.count += 1
+}
+
+func (ns *StringStack) Peek() (s string) {
+	if ns.count <= 0 {
+		return ""
+	}
+	return ns.strings[ns.count-1]
+}
+
+func (ns *StringStack) Pop() {
+	if ns.count <= 0 {
 		return
 	}
-	yl.paramCount -= 1
+	ns.count -= 1
+}
+
+func (ns *StringStack) Concat() (s string) {
+	var sb strings.Builder
+	for ix := 0; ix < ns.count; ix++ {
+		sb.WriteString(ns.strings[ix])
+		if ix < (ns.count - 1) {
+			sb.WriteString(".")
+		}
+	}
+	return sb.String()
+}
+
+type YamlReportLine struct {
+	OperationID string
+	ParamNames  StringStack
+	TypeNames   StringStack
+	MediaNames  StringStack
 }
 
 func (yl *YamlReportLine) String() (s string) {
-	var rLine strings.Builder
-	WriteSB(&rLine, yl.opID, "\t", yl.PeekType(), "\t")
-
-	if nil != yl.paramName {
-		for ix := 0; ix < yl.paramCount; ix++ {
-			rLine.WriteString(yl.paramName[ix])
-			if ix < yl.paramCount-1 {
-				rLine.WriteString(".")
-			}
-		}
-
-	}
-	return rLine.String()
+	var sb strings.Builder
+	WriteSB(&sb, yl.OperationID, SEPARATORCHAR,
+		yl.MediaNames.Peek(), SEPARATORCHAR,
+		yl.TypeNames.Peek(), SEPARATORCHAR,
+		yl.ParamNames.Concat())
+	return sb.String()
 }
