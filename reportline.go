@@ -13,9 +13,9 @@ func (ns *StringStack) GetCount() (count int) {
 	return ns.count
 }
 
-func (ns *StringStack) Reset() {
+func (ns *StringStack) Initialize() {
 	ns.count = 0
-	ns.strings = nil
+	ns.strings = []string{}
 }
 
 func (ns *StringStack) Push(s string) {
@@ -66,7 +66,7 @@ func (yl *YamlReportLine) String() (s string) {
 
 func (yl *YamlReportLine) Reset() {
 	yl.OperationID = ""
-	yl.ParamNames.Reset()
-	yl.TypeNames.Reset()
-	yl.MediaNames.Reset()
+	yl.ParamNames.Initialize()
+	yl.TypeNames.Initialize()
+	yl.MediaNames.Initialize()
 }
