@@ -63,3 +63,10 @@ func (yl *YamlReportLine) String() (s string) {
 		yl.ParamNames.Concat())
 	return sb.String()
 }
+
+func (yl *YamlReportLine) Reset() {
+	yl.OperationID = ""
+	yl.ParamNames.Reset()
+	yl.TypeNames.Reset()
+	yl.MediaNames.Reset()
+}

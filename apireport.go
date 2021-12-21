@@ -44,6 +44,8 @@ func apiCallReport(item *oas.PathItem) {
 func operationParamReport(item *oas.Operation) {
 	var yl YamlReportLine
 
+	yl.Reset()
+
 	if nil == item {
 		return
 	}
