@@ -8,11 +8,11 @@ import (
 	"os"
 
 	oas "github.com/getkin/kin-openapi/openapi3"
-	// https://pkg.go.dev/github.com/getkin/kin-openapi@v0.53.0/openapi3
 )
 
 func main() {
 	InitLog()
+	// LIFO order for defer
 	defer DeferError(xLogFile.Close)
 	defer DeferError(xLogBuffer.Flush)
 	InitFlags()
@@ -43,7 +43,7 @@ func main() {
 	}
 
 	if FlagApiReport {
-		// ApiReport(xApi)
+		ApiReport(xApi)
 	}
 
 	if FlagDereference {

@@ -21,8 +21,15 @@ func ApiReport(api *oas.T) {
 			apiFileName, err.Error())
 	}
 	outWriter = bufio.NewWriter(outFile)
-	DeferError(outWriter.Flush)
-	DeferError(outFile.Close)
+	// LIFO order for defer
+	defer DeferError(outFile.Close)
+	defer DeferError(outWriter.Flush)
+	_, err = outWriter.WriteString(APIHEADERS)
+	if nil != err {
+		xLog.Fatalf(
+			"Failed to write API Headers to %s because %s\n",
+			apiFileName, err.Error())
+	}
 
 	for _, val01 := range api.Paths {
 		apiCallReport(val01)
@@ -63,10 +70,12 @@ func doContent(yl *YamlReportLine, c oas.Content) {
 	}
 
 	for key := range c {
+		yl.MediaNames.Push(key)
 		ref, ok := c[key]
 		if ok && nil != ref && nil != ref.Schema {
 			doSchema(yl, ref.Schema.Value)
 		}
+		yl.MediaNames.Pop()
 	}
 
 }
@@ -102,7 +111,8 @@ func doSchema(yl *YamlReportLine, schema *oas.Schema) {
 	yl.TypeNames.Push(schema.Type)
 	_, err := outWriter.WriteString(yl.String())
 	if err != nil {
-		return
+		xLog.Fatalf("outWriter.WriteString(\"%s\") failed because %s\n",
+			yl.String(), err.Error())
 	}
 	if FlagDebug {
 		xLog.Println(yl.String())

@@ -59,7 +59,7 @@ func InitFlags() {
 	nFlags.BoolP("verbose", "v", false, "Supply informative messages")
 	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently 'SIMPLEX' only) ")
 	nFlags.BoolP("expand-references", "x", true, "Expand internal and external references in POST methods")
-	nFlags.BoolP("api-report", "a", true, "Provide a CSV report on API names and parameters")
+	nFlags.BoolP("api-report", "a", false, "Provide a CSV report on API names and parameters")
 	// nFlags.BoolP("prettyprint", "p", true, "Pretty-print JSON output")
 
 	err := nFlags.Parse(os.Args[1:])
@@ -78,7 +78,7 @@ func InitFlags() {
 	}
 
 	if nil != err {
-		xLog.Fatalf("\nerror parsing flags: %s\n%s %s\n%s\n\t%v",
+		xLog.Fatalf("\nerror parsing flags: %s\n%s %s\n%s\n\t%v\n",
 			err.Error(), "common issue: 2 hyphens for long-form arguments,",
 			"1 hyphen for short-form argument",
 			"Program arguments are:",

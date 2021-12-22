@@ -3,7 +3,6 @@ module yamlfix
 go 1.17
 
 require (
-	github.com/NanXiao/stack v0.0.0-20160401052844-bfb214dbdb38
 	github.com/getkin/kin-openapi v0.87.0
 	github.com/spf13/pflag v1.0.5
 )

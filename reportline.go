@@ -1,46 +1,57 @@
 package main
 
-import "strings"
+import (
+	"strings"
+)
 
-const SEPARATORCHAR = "\t"
+const CSVSEPCHAR = "\t"
 
-type StringStack struct {
-	count   int
-	strings []string
+const NEWLINECHAR = "\n"
+
+const APIHEADERS = "OperationID" + CSVSEPCHAR +
+	"MediaType" + CSVSEPCHAR +
+	"ParameterType" + CSVSEPCHAR +
+	"ParameterName" + CSVSEPCHAR +
+	"FullyQualifiedParameter" + NEWLINECHAR
+
+type stringStack struct {
+	count int
+	data  map[int]string
 }
 
-func (ns *StringStack) GetCount() (count int) {
+func (ns *stringStack) GetCount() (count int) {
 	return ns.count
 }
 
-func (ns *StringStack) Initialize() {
+func (ns *stringStack) Initialize() {
 	ns.count = 0
-	ns.strings = []string{}
+	ns.data = make(map[int]string)
 }
 
-func (ns *StringStack) Push(s string) {
-	ns.strings[ns.count] = s
+func (ns *stringStack) Push(s string) {
+	ns.data[ns.count] = s
 	ns.count += 1
 }
 
-func (ns *StringStack) Peek() (s string) {
+func (ns *stringStack) Peek() (s string) {
 	if ns.count <= 0 {
 		return ""
 	}
-	return ns.strings[ns.count-1]
+	return ns.data[ns.count-1]
 }
 
-func (ns *StringStack) Pop() {
+func (ns *stringStack) Pop() {
 	if ns.count <= 0 {
 		return
 	}
 	ns.count -= 1
+	delete(ns.data, ns.count)
 }
 
-func (ns *StringStack) Concat() (s string) {
+func (ns *stringStack) Concat() (s string) {
 	var sb strings.Builder
 	for ix := 0; ix < ns.count; ix++ {
-		sb.WriteString(ns.strings[ix])
+		sb.WriteString(ns.data[ix])
 		if ix < (ns.count - 1) {
 			sb.WriteString(".")
 		}
@@ -50,17 +61,25 @@ func (ns *StringStack) Concat() (s string) {
 
 type YamlReportLine struct {
 	OperationID string
-	ParamNames  StringStack
-	TypeNames   StringStack
-	MediaNames  StringStack
+	ParamNames  stringStack
+	TypeNames   stringStack
+	MediaNames  stringStack
+}
+
+func (yl *YamlReportLine) GetHeaders() (s string) {
+	return "OperationID" + "\t" +
+		"MediaType" + "\t" +
+		"ParameterName" + "\t" +
+		"FullyQualifiedParameter" + "\n"
 }
 
 func (yl *YamlReportLine) String() (s string) {
 	var sb strings.Builder
-	WriteSB(&sb, yl.OperationID, SEPARATORCHAR,
-		yl.MediaNames.Peek(), SEPARATORCHAR,
-		yl.TypeNames.Peek(), SEPARATORCHAR,
-		yl.ParamNames.Concat())
+	WriteSB(&sb, yl.OperationID, CSVSEPCHAR,
+		yl.MediaNames.Peek(), CSVSEPCHAR,
+		yl.TypeNames.Peek(), CSVSEPCHAR,
+		yl.ParamNames.Peek(), CSVSEPCHAR,
+		yl.ParamNames.Concat(), "\n")
 	return sb.String()
 }
 
