@@ -6,3 +6,5 @@ yamlfix.log
 /output.json
 input.yaml
 /apireport.csv
+apireport.ods
+.~lock.apireport.ods#
