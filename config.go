@@ -67,12 +67,11 @@ func InitFlags() {
 	// do quietness setup first
 	FlagQuiet = GetFlagBool("quiet")
 	if FlagQuiet {
-		FlagVerbose = false
 		xLog.SetOutput(xLogBuffer)
 		// shut off error messages to stderr, only log them
-	} else {
-		FlagVerbose = GetFlagBool("verbose")
 	}
+
+	FlagVerbose = GetFlagBool("verbose")
 	if FlagVerbose {
 		xLog.Print("Verbose mode engaged ... ")
 	}
