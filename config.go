@@ -56,8 +56,8 @@ func InitFlags() {
 	nFlags.BoolP("debug", "d", false,
 		"Enable additional informational and operational logging output for debug purposes")
 	nFlags.BoolP("quiet", "q", false, "Suppress output to stdout and stderr (output still goes to logfile)")
-	nFlags.BoolP("verbose", "v", false, "Supply informative messages")
-	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently 'SIMPLEX' only) ")
+	nFlags.BoolP("verbose", "v", false, "Supply additional informative messages during run")
+	nFlags.StringP("format", "", "SIMPLEX", "Name of formatting module/method (currently supports 'SIMPLEX' only) ")
 	nFlags.BoolP("expand-references", "x", true, "Expand internal and external references in POST methods")
 	nFlags.BoolP("api-report", "a", false, "Provide a CSV report on API names and parameters for all functions")
 	// nFlags.BoolP("prettyprint", "p", true, "Pretty-print JSON output")
@@ -141,6 +141,9 @@ func InitFlags() {
 	}
 
 	FlagApiReport = GetFlagBool("api-report")
+	if FlagApiReport && FlagVerbose {
+		xLog.Printf("Generating API parameter report")
+	}
 }
 
 // UsageMessage /* UsageMessage
