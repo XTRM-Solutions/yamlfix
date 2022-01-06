@@ -154,7 +154,7 @@ func GetFlagBool(key string) (value bool) {
 	var err error
 	value, err = nFlags.GetBool(key)
 	if nil != err {
-		xLog.Fatalf("error fetching value for boolean flag [ %s ]\n", key)
+		xLog.Fatalf("error fetching value for boolean flag [ %s ]: %s \n", key, err.Error())
 		return false
 	}
 	return value
@@ -165,7 +165,7 @@ func GetFlagString(key string) (value string) {
 	var err error
 	value, err = nFlags.GetString(key)
 	if nil != err {
-		xLog.Fatalf("error fetching value for string flag [ %s ]\n", key)
+		xLog.Fatalf("error fetching value for string flag [ %s ]: %s \n", key, err.Error())
 		return ""
 	}
 	return value
@@ -176,7 +176,7 @@ func GetFlagInt(key string) (value int) {
 	var err error
 	value, err = nFlags.GetInt(key)
 	if nil != err {
-		xLog.Fatalf("error fetching value for integer flag [ %s ]\n", key)
+		xLog.Fatalf("error fetching value for integer flag [ %s ]: %s \n", key, err.Error())
 		return 0
 	}
 	return value
