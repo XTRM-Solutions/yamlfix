@@ -48,7 +48,7 @@ func WriteSB(sb *strings.Builder, input ...string) {
 	}
 }
 
-// MarkdownToHtml converts simple markdown formatting
+// MarkdownToHtml converts simple Markdown formatting
 // into HTML-tagged formatted text, naively.
 func MarkdownToHtml(markdown string) (html string) {
 	const ThreeStars = "***"
@@ -62,7 +62,7 @@ func MarkdownToHtml(markdown string) (html string) {
 	if "" == markdown {
 		return ""
 	}
-	// MIGHT be a better way to do it?  MUST use this order!
+	// MIGHT be a better way to do it?  MUST use 3-2-1 order!
 	html = MarkdownSeparatorToHtmlTags(markdown, ThreeStars, "b", "i")
 	html = MarkdownSeparatorToHtmlTags(html, TwoStars, "b")
 	html = MarkdownSeparatorToHtmlTags(html, OneStar, "i")

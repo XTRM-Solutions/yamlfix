@@ -48,7 +48,7 @@ func InitFlags() {
 
 	nFlags = pflag.NewFlagSet("default", pflag.ContinueOnError)
 	nFlags.BoolP("expand-only", "", false, "Do not create JSON parameter tables (implies -x false)")
-	nFlags.StringP("infile", "i", "input.old_yaml", "name of YAML file to process")
+	nFlags.StringP("infile", "i", "input.yaml", "name of YAML file to process")
 	nFlags.StringP("outfile", "o", "output.json", "name of processed (output) JSON file")
 	nFlags.IntP("indent", "n", 2, "Spaces to use for each indent level")
 	nFlags.BoolP("help", "h", false, "Display help message and usage information")
@@ -64,6 +64,14 @@ func InitFlags() {
 
 	err := nFlags.Parse(os.Args[1:])
 
+	if nil != err {
+		xLog.Fatalf("\nerror parsing flags: %s\n%s %s\n%s\n\t%v\n",
+			err.Error(), "common issue: 2 hyphens for long-form arguments,",
+			"1 hyphen for short-form argument",
+			"Program arguments are:",
+			os.Args)
+	}
+
 	// do quietness setup first
 	FlagQuiet = GetFlagBool("quiet")
 	if FlagQuiet {
@@ -76,17 +84,7 @@ func InitFlags() {
 		xLog.Print("Verbose mode engaged ... ")
 	}
 
-	if nil != err {
-		xLog.Fatalf("\nerror parsing flags: %s\n%s %s\n%s\n\t%v\n",
-			err.Error(), "common issue: 2 hyphens for long-form arguments,",
-			"1 hyphen for short-form argument",
-			"Program arguments are:",
-			os.Args)
-	}
-
 	FlagDebug = GetFlagBool("debug")
-
-	// FlagPretty = GetFlagBool("prettyprint")
 
 	if len(os.Args) <= 1 || GetFlagBool("help") {
 		_, thisCmd := filepath.Split(os.Args[0])
@@ -151,7 +149,7 @@ func UsageMessage() {
 	_, _ = fmt.Println("\n\tInsert Informative Usage Message Here")
 }
 
-// GetFlagBool /* GetFlagBool(key string) (value string)
+// GetFlagBool fetch the bool for a boolean flag
 func GetFlagBool(key string) (value bool) {
 	var err error
 	value, err = nFlags.GetBool(key)
@@ -162,7 +160,7 @@ func GetFlagBool(key string) (value bool) {
 	return value
 }
 
-// GetFlagString /* GetFlagString(key string) (value string)
+// GetFlagString fetch the string associated with a CLI arg
 func GetFlagString(key string) (value string) {
 	var err error
 	value, err = nFlags.GetString(key)
