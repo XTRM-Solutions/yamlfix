@@ -5,9 +5,7 @@ import (
 )
 
 const CSVSEPCHAR = "\t"
-
 const NEWLINECHAR = "\n"
-
 const APIHEADERS = "OperationID" + CSVSEPCHAR +
 	"MediaType" + CSVSEPCHAR +
 	"ParameterType" + CSVSEPCHAR +
@@ -48,7 +46,7 @@ func (ns *stringStack) Pop() {
 	delete(ns.data, ns.count)
 }
 
-func (ns *stringStack) Concat() (s string) {
+func (ns *stringStack) String() (s string) {
 	var sb strings.Builder
 	for ix := 0; ix < ns.count; ix++ {
 		sb.WriteString(ns.data[ix])
@@ -66,20 +64,13 @@ type YamlReportLine struct {
 	MediaNames  stringStack
 }
 
-func (yl *YamlReportLine) GetHeaders() (s string) {
-	return "OperationID" + "\t" +
-		"MediaType" + "\t" +
-		"ParameterName" + "\t" +
-		"FullyQualifiedParameter" + "\n"
-}
-
 func (yl *YamlReportLine) String() (s string) {
 	var sb strings.Builder
 	WriteSB(&sb, yl.OperationID, CSVSEPCHAR,
 		yl.MediaNames.Peek(), CSVSEPCHAR,
 		yl.TypeNames.Peek(), CSVSEPCHAR,
 		yl.ParamNames.Peek(), CSVSEPCHAR,
-		yl.ParamNames.Concat(), "\n")
+		yl.ParamNames.String(), "\n")
 	return sb.String()
 }
 

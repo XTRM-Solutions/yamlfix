@@ -113,9 +113,11 @@ func MarkdownSeparatorToHtmlTags(target string, sep string, tags ...string) (rep
 	return replace.String()
 }
 
+/***********************
 func IsStringSet(s *string) (isSet bool) {
 	if nil != s && "" != *s {
 		return true
 	}
 	return false
 }
+***********************/
