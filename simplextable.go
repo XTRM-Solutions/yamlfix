@@ -102,7 +102,7 @@ func getSchemaProperties(j *oas.SchemaRef, paramName string, required []string) 
 			paramName, j.Value.Type)
 	}
 	// unreached code
-	// xLog.Panic("No possible execution path for this statement!")
+	//xLog.Panic("No possible execution path for this statement!")
 	return ""
 }
 

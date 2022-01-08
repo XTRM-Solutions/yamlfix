@@ -59,7 +59,7 @@ func MarkdownToHtml(markdown string) (html string) {
 	// const OneUnder = "_"
 	const Sneech = "`" // https://bit.ly/3qSumos
 
-	if "" == markdown {
+	if !IsStringSet(&markdown) {
 		return ""
 	}
 	// MIGHT be a better way to do it?  MUST use 3-2-1 order!
@@ -113,11 +113,9 @@ func MarkdownSeparatorToHtmlTags(target string, sep string, tags ...string) (rep
 	return replace.String()
 }
 
-/***********************
 func IsStringSet(s *string) (isSet bool) {
 	if nil != s && "" != *s {
 		return true
 	}
 	return false
 }
-***********************/
