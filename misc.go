@@ -38,12 +38,12 @@ func TagDecorate(base string, tags ...string) (decoratedString string) {
 }
 
 // WriteSB Add a series of strings to a strings.Builder
-func WriteSB(sb *strings.Builder, input ...string) {
-	for _, val := range input {
+func WriteSB(sb *strings.Builder, inputStrings ...string) {
+	for _, val := range inputStrings {
 		_, err := sb.WriteString(val)
 		if nil != err {
 			xLog.Print("strings.Builder failed to add " + val + " ??")
-			xLog.Fatal("values: ", input)
+			xLog.Fatal("values: ", inputStrings)
 		}
 	}
 }
