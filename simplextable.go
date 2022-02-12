@@ -120,13 +120,26 @@ func MakeTableRow(paramName string, description string, required []string) (tabl
 	}
 
 	for _, v := range required {
-		if paramName == v {
+		if strings.EqualFold(paramName, v) {
 			requiredText = TextTrue
+			// test for mismatched case error between
+			// required and the parameter definition
+			if paramName != v {
+				sb.Reset()
+				WriteSB(&sb,
+					"Warning: mismatch between parameter ",
+					paramName, " and ", v, "\n",
+					"The list of all required strings are: \n")
+
+				xLog.Println(sb.String(), required)
+				//fmt.Println(sb.String())
+			}
 			break
 		}
 	}
 
 	// table data
+	sb.Reset()
 	WriteSB(&sb,
 		TagDecorate(paramName, "td"),
 		TagDecorate(description, "td"),
