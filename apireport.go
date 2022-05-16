@@ -9,6 +9,7 @@ import (
 var outWriter *bufio.Writer
 
 func ApiReport(api *oas.T) {
+	//goland:noinspection SpellCheckingInspection
 	const apiFileName = "apireport.csv"
 
 	if nil == api {

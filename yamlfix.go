@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"io"
 	"os"
+	"strings"
 
 	oas "github.com/getkin/kin-openapi/openapi3"
 )
@@ -27,28 +28,35 @@ func main() {
 	}
 
 	if FlagDebug {
-		writeJsonOASFile(xApi, "debug_pre_"+GetFlagString("outfile"))
+		var sb strings.Builder
+		sb.WriteString("debug_pre_")
+		sb.WriteString(GetFlagString("outfile"))
+		writeJsonOASFile(xApi, sb.String())
+		xLog.Printf("Writing debug output file to %s\n", sb.String())
 	}
 
 	if !FlagNoTables {
-		format := GetFlagString("format")
-		switch format {
+		switch GetFlagString("format") {
 		case "SIMPLEX":
 			SimplexEnhanceDescriptions(xApi)
 			break
 		default:
-			xLog.Printf("Huh? Somehow an unrecognized format [ %s ] was requested?", format)
+			xLog.Printf("Huh? Somehow an unrecognized format [ %s ] was requested?",
+				GetFlagString("format"))
 		}
 
 	}
 
 	if FlagApiReport {
+		if FlagDebug {
+			xLog.Println("Creating API report")
+		}
 		ApiReport(xApi)
 	}
 
 	if FlagDereference {
 		if FlagDebug {
-			xLog.Print("Writing output file dereferenced, and unmodified file as debug_post_reference_")
+			xLog.Println("Writing output file dereferenced, and unmodified file as debug_post_reference_")
 			writeJsonOASFile(xApi, "debug_post_reference_"+GetFlagString("outfile"))
 		} else {
 			xLog.Print("Writing output file with internal referenced expanded")
@@ -74,8 +82,7 @@ func writeJsonOASFile(api *oas.T, fileName string) {
 		xLog.Fatalf("Attempting to reconstruct API spec failed because: %s", err.Error())
 	}
 
-	src := bufio.NewReader(bytes.NewReader(output))
-	decJson := json.NewDecoder(src)
+	decJson := json.NewDecoder(bufio.NewReader(bytes.NewReader(output)))
 
 	outFile, err := os.Create(fileName)
 	if nil != err {

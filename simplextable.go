@@ -48,11 +48,11 @@ func SimplexEnhanceDescriptions(api *oas.T) {
 		// if there is no data for the table, don't display a table
 		if "" != requestTableRows {
 			WriteSB(&sb, RequestHeader, SimplexRequestTableHeader,
-				TableOpen, requestTableRows, TableClose)
+				TableBodyOpen, requestTableRows, TableBodyAndTableClose)
 		}
 		if "" != responseTableRows {
 			WriteSB(&sb, ResponseHeader, SimplexResponseTableHeader,
-				TableOpen, colReplace.Replace(responseTableRows), TableClose)
+				TableBodyOpen, colReplace.Replace(responseTableRows), TableBodyAndTableClose)
 		}
 		if sb.Len() > 0 {
 			val01.Post.Description =

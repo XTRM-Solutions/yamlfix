@@ -13,8 +13,8 @@ const RequestHeader = HeaderOpen + "Request Parameters" + HeaderClose
 const ResponseHeader = HeaderOpen + "Response Parameters" + HeaderClose
 const SimplexRequestTableHeader = "<table><thead><tr><th>Parameter</th><th>Description</th><th>Required</th></tr></thead>"
 const SimplexResponseTableHeader = "<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead>"
-const TableOpen = "<tbody>"
-const TableClose = "</tbody></table>"
+const TableBodyOpen = "<tbody>"
+const TableBodyAndTableClose = "</tbody></table>"
 
 const KeyAppJson = "application/json"
 

@@ -52,7 +52,7 @@ func StripPathItem(item *oas.PathItem) {
 // StripOperationReferences
 // For a given oas.Operation, remove the references
 // within it. That consists of cleaning the Schema
-// references and callbacks (which are Pathitems)
+// references and callbacks (which are PathItems)
 func StripOperationReferences(op *oas.Operation) {
 	if nil == op {
 		return

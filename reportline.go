@@ -4,8 +4,11 @@ import (
 	"strings"
 )
 
+//goland:noinspection SpellCheckingInspection
 const CSVSEPCHAR = "\t"
 const NEWLINECHAR = "\n"
+
+//goland:noinspection SpellCheckingInspection
 const APIHEADERS = "OperationID" + CSVSEPCHAR +
 	"MediaType" + CSVSEPCHAR +
 	"ParameterType" + CSVSEPCHAR +
@@ -50,7 +53,7 @@ func (ns *stringStack) String() (s string) {
 	var sb strings.Builder
 	for ix := 0; ix < ns.count; ix++ {
 		sb.WriteString(ns.data[ix])
-		if ix < (ns.count - 1) {
+		if !(ix >= ns.count) {
 			sb.WriteString(".")
 		}
 	}

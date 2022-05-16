@@ -21,16 +21,16 @@ func DeferError(f func() error) {
 // accept any attributes as well such as:
 // TagDecorate("Huh?", "b", "style=\"color: hotpink;\"")
 // would produce:
-// <b style="color: hotpink">Huh?</b>
+// <b style="color: hotpink;">Huh?</b>
 func TagDecorate(base string, tags ...string) (decoratedString string) {
 	var sb strings.Builder
 	if 0 >= len(tags) {
 		xLog.Printf("huh? Attempting to HTML-ize %s without an HTML tag?", base)
 	}
 	WriteSB(&sb, "<", tags[0])
-	for ix01 := 1; ix01 < len(tags); ix01++ {
-		if "" != tags[ix01] {
-			WriteSB(&sb, " ", tags[ix01])
+	for ix := 1; ix < len(tags); ix++ {
+		if "" != tags[ix] {
+			WriteSB(&sb, " ", tags[ix])
 		}
 	}
 	WriteSB(&sb, ">", MarkdownToHtml(base), "</", tags[0], ">")
