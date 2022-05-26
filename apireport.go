@@ -115,8 +115,8 @@ func doSchema(yl *YamlReportLine, schema *oas.Schema) {
 		xLog.Fatalf("outWriter.WriteString(\"%s\") failed because %s\n",
 			yl.String(), err.Error())
 	}
-	if FlagDebug {
-		xLog.Println(yl.String())
+	if FlagDebug || FlagVerbose {
+		xLog.Print(yl.String())
 	}
 
 	doSchemaRefs(yl, &schema.OneOf)

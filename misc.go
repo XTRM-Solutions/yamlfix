@@ -19,9 +19,9 @@ func DeferError(f func() error) {
 
 // TagDecorate Add HTML open/close tag to a phrase, and
 // accept any attributes as well such as:
-// TagDecorate("Huh?", "b", "style=\"color: hotpink;\"")
+// TagDecorate("Huh?", "b", "style=\"color: hotpink;\"", "id=\"+GetUnusedId()+"\"")
 // would produce:
-// <b style="color: hotpink;">Huh?</b>
+// <b style="color: hotpink; id="0000000F_spizfuzzle">Huh?</b>
 func TagDecorate(base string, tags ...string) (decoratedString string) {
 	var sb strings.Builder
 	if 0 >= len(tags) {

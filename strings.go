@@ -4,7 +4,7 @@ package main
 // is now a one-variable change
 
 const MinIndent int = 1
-const MaxIndent int = 8
+const MaxIndent int = 32
 
 const HeaderLevel = "3"
 const HeaderOpen = "<h" + HeaderLevel + ">"
