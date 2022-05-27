@@ -33,10 +33,12 @@ func (ns *stringStack) Push(s string) {
 
 func (ns *stringStack) Peek() (s string) {
 	ns.lock.RLock()
+	// s = ns.Count <= 0 ? "" : ns.data[ns.count-1];
 	if ns.count <= 0 {
-		return ""
+		s = ""
+	} else {
+		s = ns.data[ns.count-1]
 	}
-	s = ns.data[ns.count-1]
 	ns.lock.RUnlock()
 	return s
 }
