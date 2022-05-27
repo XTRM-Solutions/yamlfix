@@ -119,6 +119,7 @@ func doSchema(yl *YamlReportLine, schema *oas.Schema) {
 		xLog.Print(yl.String())
 	}
 
+	// recursively un-ref the schema
 	doSchemaRefs(yl, &schema.OneOf)
 	doSchemaRefs(yl, &schema.AnyOf)
 	doSchemaRefs(yl, &schema.AllOf)
@@ -131,5 +132,6 @@ func doSchema(yl *YamlReportLine, schema *oas.Schema) {
 	if nil != schema.Items {
 		doSchema(yl, schema.Items.Value)
 	}
+
 	yl.TypeNames.Pop()
 }

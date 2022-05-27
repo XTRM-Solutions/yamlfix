@@ -56,7 +56,7 @@ func main() {
 
 	if FlagDereference {
 		if FlagDebug {
-			xLog.Println("Writing output file dereferenced, and unmodified file as debug_post_reference_")
+			xLog.Println("Writing output file with all references replaced, and unmodified file as debug_post_reference_")
 			writeJsonOASFile(xApi, "debug_post_reference_"+GetFlagString("outfile"))
 		} else {
 			xLog.Print("Writing output file with internal referenced expanded")
@@ -73,16 +73,18 @@ func main() {
 			xLog.Print("writing output file with internal references")
 		}
 	}
-
 }
 
+// reformat JSON & output to file
 func writeJsonOASFile(api *oas.T, fileName string) {
+
 	output, err := api.MarshalJSON()
 	if nil != err {
 		xLog.Fatalf("Attempting to reconstruct API spec failed because: %s", err.Error())
 	}
 
-	decJson := json.NewDecoder(bufio.NewReader(bytes.NewReader(output)))
+	// decoder does its own buffering
+	decJson := json.NewDecoder(bytes.NewReader(output))
 
 	outFile, err := os.Create(fileName)
 	if nil != err {
@@ -99,15 +101,20 @@ func writeJsonOASFile(api *oas.T, fileName string) {
 	encJson.SetEscapeHTML(false)
 
 	var m map[string]interface{}
-	err = nil
-	for ; nil == err; err = encJson.Encode(&m) {
+
+	// this would be best understood as a do-while loop:
+	// do { decode; encode; } while (nil == err01);
+
+	for err = nil; nil == err; err = encJson.Encode(&m) {
 		err = decJson.Decode(&m)
 		if nil != err {
 			break
 		}
 	}
+	// this error could be from EITHER encJson.Encode or decJson.Decode
 	if io.EOF != err {
-		xLog.Fatalf("Could not output JSON file %s because: %s", fileName, err.Error())
+		xLog.Fatalf("Could not output JSON file %s because: %s",
+			fileName, err.Error())
 	}
 
 }
