@@ -45,7 +45,6 @@ func InitLog() {
 }
 
 func InitFlags() {
-
 	nFlags = pflag.NewFlagSet("default", pflag.ContinueOnError)
 	nFlags.BoolP("expand-only", "", false, "Do not create JSON parameter tables")
 	nFlags.StringP("infile", "i", "input.yaml", "name of YAML file to process")
