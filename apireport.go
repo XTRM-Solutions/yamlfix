@@ -59,9 +59,11 @@ func operationParamReport(item *oas.Operation) {
 	}
 
 	yl.OperationID = item.OperationID
+	/*  no longer need this
 	if FlagDebug {
 		xLog.Printf("operation id: %s\n", item.OperationID)
 	}
+	*/
 	doContent(&yl, item.RequestBody.Value.Content)
 }
 
@@ -115,9 +117,12 @@ func doSchema(yl *YamlReportLine, schema *oas.Schema) {
 		xLog.Fatalf("outWriter.WriteString(\"%s\") failed because %s\n",
 			yl.String(), err.Error())
 	}
+
+	/* don't do this
 	if FlagDebug || FlagVerbose {
 		xLog.Print(yl.String())
 	}
+	*/
 
 	// recursively un-ref the schema
 	doSchemaRefs(yl, &schema.OneOf)
