@@ -16,6 +16,7 @@ func main() {
 	// LIFO order for defer
 	defer misc.DeferError(xLogFile.Close)
 	defer misc.DeferError(xLogBuffer.Flush)
+
 	InitFlags()
 
 	xApi, err := oas.NewLoader().LoadFromFile(GetFlagString("infile"))

@@ -6,7 +6,7 @@ import (
 	"yamlfix/stringstack"
 )
 
-var csvSepChar string = "\t"
+const csvSepChar = "\t"
 
 type YamlReportLine struct {
 	OperationID string
@@ -30,8 +30,4 @@ func (yl *YamlReportLine) Reset() {
 	yl.ParamNames.Initialize()
 	yl.TypeNames.Initialize()
 	yl.MediaNames.Initialize()
-}
-
-func (yl *YamlReportLine) SetSeparatorChar(sepchar string) {
-	csvSepChar = sepchar
 }
