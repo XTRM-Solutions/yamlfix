@@ -1,7 +1,7 @@
 package main
 
 // why this? Because Changing the header level
-// is now a one-variable change
+// is now a one-const change
 
 const MinIndent int = 1
 const MaxIndent int = 32

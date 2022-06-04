@@ -19,7 +19,8 @@ import (
 // StripReferences
 // Remove the reference pointer from the loaded OAS data
 // thus, when the OAS data is unmarshalled back into JSON
-// there are no internal references.
+// there are no internal references and the full data is
+// written out
 func StripReferences(api *oas.T) {
 	if nil == api {
 		return
@@ -83,10 +84,11 @@ func StripReferencesSchema(schema *oas.SchemaRef) {
 	if nil == schema {
 		return
 	}
-	// clean this reference, and look for sub-references
-	// within the schemaBody
+	//  This is the actual work of replacing the reference
 	schema.Ref = ""
 	schemaBody := schema.Value
+
+	// now handle all the potential sub-schemas ...
 	if 0 != len(schemaBody.Extensions) {
 		xLog.Print("WARNING: Extension Properties references are NOT handled by this program")
 	}

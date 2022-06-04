@@ -46,6 +46,7 @@ func MarkdownToHtml(markdown string) (html string) {
 	html = MarkdownSeparatorToHtmlTags(html, OneStar, "i")
 	html = MarkdownSeparatorToHtmlTags(html, ThreeUnder, "i", "b")
 	html = MarkdownSeparatorToHtmlTags(html, TwoUnder, "b")
+	// This breaks some documentation, so DO NOT USE
 	// html = MarkdownSeparatorToHtmlTags(html, OneUnder, "i")
 	return MarkdownSeparatorToHtmlTags(html, Sneech, "code")
 }
