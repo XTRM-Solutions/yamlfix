@@ -21,7 +21,6 @@ var xLogBuffer *bufio.Writer
 
 var xLog log.Logger
 
-/* var FlagPretty bool  */
 var FlagIndentString string
 var FlagDereference bool
 var FlagDebug bool
@@ -30,6 +29,8 @@ var FlagQuiet bool
 var FlagNoTables bool
 var FlagApiReport bool
 var nFlags *pflag.FlagSet
+
+/* var FlagPretty bool  */
 
 func InitLog() {
 	var err error
