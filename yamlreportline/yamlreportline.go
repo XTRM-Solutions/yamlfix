@@ -31,3 +31,7 @@ func (yl *YamlReportLine) Reset() {
 	yl.TypeNames.Initialize()
 	yl.MediaNames.Initialize()
 }
+
+func (yl *YamlReportLine) Init() {
+	yl.Reset()
+}
