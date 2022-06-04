@@ -4,6 +4,8 @@ import (
 	"bufio"
 	oas "github.com/getkin/kin-openapi/openapi3"
 	"os"
+	"yamlfix/misc"
+	"yamlfix/yamlreportline"
 )
 
 var outWriter *bufio.Writer
@@ -23,8 +25,8 @@ func ApiReport(api *oas.T) {
 	}
 	outWriter = bufio.NewWriter(outFile)
 	// LIFO order for defer
-	defer DeferError(outFile.Close)
-	defer DeferError(outWriter.Flush)
+	defer misc.DeferError(outFile.Close)
+	defer misc.DeferError(outWriter.Flush)
 	_, err = outWriter.WriteString(APIHEADERS)
 	if nil != err {
 		xLog.Fatalf(
@@ -50,7 +52,7 @@ func apiCallReport(item *oas.PathItem) {
 }
 
 func operationParamReport(item *oas.Operation) {
-	var yl YamlReportLine
+	var yl yamlreportline.YamlReportLine
 
 	yl.Reset()
 
@@ -67,7 +69,7 @@ func operationParamReport(item *oas.Operation) {
 	doContent(&yl, item.RequestBody.Value.Content)
 }
 
-func doContent(yl *YamlReportLine, c oas.Content) {
+func doContent(yl *yamlreportline.YamlReportLine, c oas.Content) {
 	if nil == yl || nil == c {
 		return
 	}
@@ -83,7 +85,7 @@ func doContent(yl *YamlReportLine, c oas.Content) {
 
 }
 
-func doSchemas(yl *YamlReportLine, schemas oas.Schemas) {
+func doSchemas(yl *yamlreportline.YamlReportLine, schemas oas.Schemas) {
 	if nil == yl || nil == schemas {
 		return
 	}
@@ -97,7 +99,7 @@ func doSchemas(yl *YamlReportLine, schemas oas.Schemas) {
 	}
 }
 
-func doSchemaRefs(yl *YamlReportLine, sr *oas.SchemaRefs) {
+func doSchemaRefs(yl *yamlreportline.YamlReportLine, sr *oas.SchemaRefs) {
 	if nil == yl || nil == sr {
 		return
 	}
@@ -106,7 +108,7 @@ func doSchemaRefs(yl *YamlReportLine, sr *oas.SchemaRefs) {
 	}
 }
 
-func doSchema(yl *YamlReportLine, schema *oas.Schema) {
+func doSchema(yl *yamlreportline.YamlReportLine, schema *oas.Schema) {
 	if nil == schema || nil == yl {
 		return
 	}

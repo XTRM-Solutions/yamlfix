@@ -12,13 +12,16 @@ import (
 	"github.com/spf13/pflag"
 )
 
+//goland:noinspection SpellCheckingInspection
+const CSVSEPCHAR = "\t"
+const NEWLINECHAR = "\n"
+
 var xLogFile *os.File
 var xLogBuffer *bufio.Writer
 
 var xLog log.Logger
 
 /* var FlagPretty bool  */
-
 var FlagIndentString string
 var FlagDereference bool
 var FlagDebug bool
@@ -45,6 +48,7 @@ func InitLog() {
 }
 
 func InitFlags() {
+
 	nFlags = pflag.NewFlagSet("default", pflag.ContinueOnError)
 	nFlags.BoolP("expand-only", "", false, "Do not create JSON parameter tables")
 	nFlags.StringP("infile", "i", "input.yaml", "name of YAML file to process")

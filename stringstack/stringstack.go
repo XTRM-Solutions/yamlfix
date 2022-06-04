@@ -1,15 +1,15 @@
-package main
+package stringstack
 
 import "strings"
 import "sync"
 
-type stringStack struct {
+type StringStack struct {
 	count int
 	data  map[int]string
 	lock  sync.RWMutex
 }
 
-func (ns *stringStack) GetCount() (count int) {
+func (ns *StringStack) GetCount() (count int) {
 	ns.lock.RLock()
 	{
 		count = ns.count
@@ -18,7 +18,7 @@ func (ns *stringStack) GetCount() (count int) {
 	return count
 }
 
-func (ns *stringStack) Initialize() {
+func (ns *StringStack) Initialize() {
 	ns.lock.Lock()
 	{
 		ns.count = 0
@@ -27,7 +27,7 @@ func (ns *stringStack) Initialize() {
 	ns.lock.Unlock()
 }
 
-func (ns *stringStack) Push(s string) {
+func (ns *StringStack) Push(s string) {
 	ns.lock.Lock()
 	{
 		ns.data[ns.count] = s
@@ -37,7 +37,7 @@ func (ns *stringStack) Push(s string) {
 
 }
 
-func (ns *stringStack) Peek() (s string) {
+func (ns *StringStack) Peek() (s string) {
 	ns.lock.RLock()
 	{
 		// s = ns.Count <= 0 ? "" : ns.data[ns.count-1];
@@ -51,7 +51,7 @@ func (ns *stringStack) Peek() (s string) {
 	return s
 }
 
-func (ns *stringStack) Pop() {
+func (ns *StringStack) Pop() {
 	ns.lock.Lock()
 	{
 		if ns.count > 0 {
@@ -62,7 +62,7 @@ func (ns *stringStack) Pop() {
 	ns.lock.Unlock()
 }
 
-func (ns *stringStack) String() (s string) {
+func (ns *StringStack) String() (s string) {
 	var sb strings.Builder
 	ns.lock.RLock()
 	{

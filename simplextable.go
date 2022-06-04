@@ -1,10 +1,10 @@
 package main
 
 import (
+	oas "github.com/getkin/kin-openapi/openapi3"
 	"runtime"
 	"strings"
-
-	oas "github.com/getkin/kin-openapi/openapi3"
+	"yamlfix/misc"
 )
 
 // SimplexEnhanceDescriptions
@@ -39,19 +39,20 @@ func SimplexEnhanceDescriptions(api *oas.T) {
 				responseTableRows = getSchemaProperties(schema.Schema, "", nil)
 			}
 		}
-
-		if FlagDebug {
-			xLog.Printf("api is type %T, %T", requestTableRows, responseTableRows)
-		}
+		/*
+			if FlagDebug {
+				xLog.Printf("api is type %T, %T", requestTableRows, responseTableRows)
+			}
+		*/
 
 		var sb strings.Builder
 		// if there is no data for the table, don't display a table
 		if "" != requestTableRows {
-			WriteSB(&sb, RequestHeader, SimplexRequestTableHeader,
+			misc.WriteSB(&sb, RequestHeader, SimplexRequestTableHeader,
 				TableBodyOpen, requestTableRows, TableBodyAndTableClose)
 		}
 		if "" != responseTableRows {
-			WriteSB(&sb, ResponseHeader, SimplexResponseTableHeader,
+			misc.WriteSB(&sb, ResponseHeader, SimplexResponseTableHeader,
 				TableBodyOpen, colReplace.Replace(responseTableRows), TableBodyAndTableClose)
 		}
 		if sb.Len() > 0 {
@@ -126,7 +127,7 @@ func MakeTableRow(paramName string, description string, required []string) (tabl
 			// required and the parameter definition
 			if paramName != v {
 				sb.Reset()
-				WriteSB(&sb,
+				misc.WriteSB(&sb,
 					"Warning: mismatch between parameter ",
 					paramName, " and ", v, "\n",
 					"The list of all required strings are: \n")
@@ -140,7 +141,7 @@ func MakeTableRow(paramName string, description string, required []string) (tabl
 
 	// table data
 	sb.Reset()
-	WriteSB(&sb,
+	misc.WriteSB(&sb,
 		TagDecorate(paramName, "td"),
 		TagDecorate(description, "td"),
 		TagDecorate(requiredText, "td"))

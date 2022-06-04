@@ -3,19 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+	"yamlfix/misc"
 )
-
-// DeferError
-// account for an at-close function that
-// may return an error for its close
-func DeferError(f func() error) {
-	err := f()
-	if nil != err {
-		xLog.Printf("%s%s",
-			"(may be harmless) error in deferred function: ",
-			err.Error())
-	}
-}
 
 // TagDecorate Add HTML open/close tag to a phrase, and
 // accept any attributes as well such as:
@@ -27,25 +16,14 @@ func TagDecorate(base string, tags ...string) (decoratedString string) {
 	if 0 >= len(tags) {
 		xLog.Printf("huh? Attempting to HTML-ize %s without an HTML tag?", base)
 	}
-	WriteSB(&sb, "<", tags[0])
+	misc.WriteSB(&sb, "<", tags[0])
 	for ix := 1; ix < len(tags); ix++ {
 		if "" != tags[ix] {
-			WriteSB(&sb, " ", tags[ix])
+			misc.WriteSB(&sb, " ", tags[ix])
 		}
 	}
-	WriteSB(&sb, ">", MarkdownToHtml(base), "</", tags[0], ">")
+	misc.WriteSB(&sb, ">", MarkdownToHtml(base), "</", tags[0], ">")
 	return sb.String()
-}
-
-// WriteSB Add a series of strings to a strings.Builder
-func WriteSB(sb *strings.Builder, inputStrings ...string) {
-	for _, val := range inputStrings {
-		_, err := sb.WriteString(val)
-		if nil != err {
-			xLog.Print("strings.Builder failed to add " + val + " ??")
-			xLog.Fatal("values: ", inputStrings)
-		}
-	}
 }
 
 // MarkdownToHtml converts simple Markdown formatting
@@ -102,11 +80,11 @@ func MarkdownSeparatorToHtmlTags(target string, sep string, tags ...string) (rep
 			for _, val := range tags {
 				markedText = TagDecorate(markedText, val)
 			}
-			WriteSB(&replace,
+			misc.WriteSB(&replace,
 				strings.ReplaceAll(substr[ix01], sep, ""),
 				markedText)
 		}
-		WriteSB(&replace, substr[len(substr)-1])
+		misc.WriteSB(&replace, substr[len(substr)-1])
 	} else {
 		return target
 	}

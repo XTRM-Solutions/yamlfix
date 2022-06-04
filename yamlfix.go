@@ -4,18 +4,18 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/json"
+	oas "github.com/getkin/kin-openapi/openapi3"
 	"io"
 	"os"
 	"strings"
-
-	oas "github.com/getkin/kin-openapi/openapi3"
+	"yamlfix/misc"
 )
 
 func main() {
 	InitLog()
 	// LIFO order for defer
-	defer DeferError(xLogFile.Close)
-	defer DeferError(xLogBuffer.Flush)
+	defer misc.DeferError(xLogFile.Close)
+	defer misc.DeferError(xLogBuffer.Flush)
 	InitFlags()
 
 	xApi, err := oas.NewLoader().LoadFromFile(GetFlagString("infile"))
@@ -91,10 +91,10 @@ func writeJsonOASFile(api *oas.T, fileName string) {
 		xLog.Fatalf("Failed to create output JSON file %s because %s",
 			fileName, err.Error())
 	}
-	defer DeferError(outFile.Close)
+	defer misc.DeferError(outFile.Close)
 
 	bufferOutFile := bufio.NewWriter(outFile)
-	defer DeferError(bufferOutFile.Flush)
+	defer misc.DeferError(bufferOutFile.Flush)
 
 	encJson := json.NewEncoder(bufferOutFile)
 	encJson.SetIndent("", FlagIndentString)
