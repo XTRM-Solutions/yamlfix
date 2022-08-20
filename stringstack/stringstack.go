@@ -1,7 +1,9 @@
 package stringstack
 
-import "strings"
-import "sync"
+import (
+	"strings"
+	"sync"
+)
 
 type StringStack struct {
 	count int
@@ -9,31 +11,44 @@ type StringStack struct {
 	lock  sync.RWMutex
 }
 
-func (ns *StringStack) GetCount() (count int) {
+func (ns *StringStack) Rlock() {
 	ns.lock.RLock()
+}
+func (ns *StringStack) RUnlock() {
+	ns.lock.RUnlock()
+}
+func (ns *StringStack) Lock() {
+	ns.lock.Lock()
+}
+func (ns *StringStack) Unlock() {
+	ns.lock.Unlock()
+}
+
+func (ns *StringStack) GetCount() (count int) {
+	ns.Rlock()
 	{
 		count = ns.count
 	}
-	ns.lock.RUnlock()
+	ns.RUnlock()
 	return count
 }
 
 func (ns *StringStack) Initialize() {
-	ns.lock.Lock()
+	ns.Lock()
 	{
 		ns.count = 0
 		ns.data = make(map[int]string)
 	}
-	ns.lock.Unlock()
+	ns.Unlock()
 }
 
 func (ns *StringStack) Push(s string) {
-	ns.lock.Lock()
+	ns.Lock()
 	{
 		ns.data[ns.count] = s
 		ns.count++
 	}
-	ns.lock.Unlock()
+	ns.RUnlock()
 
 }
 
